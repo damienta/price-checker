@@ -1,0 +1,93 @@
+name: Morning price check
+
+on:
+  schedule:
+    # GitHub cron is UTC and ignores daylight saving, so run at both 07:00 and 08:00 UTC
+    # and let the gate below keep whichever one is 8am in the UK.
+    - cron: "0 7 * * *"
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: price-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Only run at 8am UK time
+        id: gate
+        run: |
+          hour=$(TZ=Europe/London date +%H)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$hour" != "08" ]; then
+            echo "It's ${hour}:00 in the UK, skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+
+      - uses: astral-sh/setup-uv@v6
+        if: steps.gate.outputs.run == 'true'
+
+      - name: Install
+        if: steps.gate.outputs.run == 'true'
+        run: uv sync --frozen --no-dev
+
+      - name: Check prices
+        if: steps.gate.outputs.run == 'true'
+        env:
+          EBAY_CLIENT_ID: ${{ secrets.EBAY_CLIENT_ID }}
+          EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          SERPAPI_MONTHLY_BUDGET: ${{ vars.SERPAPI_MONTHLY_BUDGET || '240' }}
+        run: uv run price-checker check
+
+      - name: Pick up Claude's findings from its branch
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          # The Claude routine pushes to main when allowed, otherwise to claude/findings.
+          if git fetch --depth=1 origin claude/findings 2>/dev/null; then
+            git show FETCH_HEAD:data/claude_findings.json > "$RUNNER_TEMP/branch_findings.json" || true
+          fi
+
+      - name: Post digest to Discord
+        if: steps.gate.outputs.run == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          uv run price-checker digest --post \
+            --findings data/claude_findings.json \
+            --findings "$RUNNER_TEMP/branch_findings.json"
+
+      - name: Save prices to the repo
+        if: always() && steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "price-checker[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "data: price check $(TZ=Europe/London date +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
+
+      - name: Tell Discord the run failed
+        if: failure() && steps.gate.outputs.run == 'true'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          uv run price-checker notify \
+            "⚠️ The morning price check failed: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
