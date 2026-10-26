@@ -9,8 +9,8 @@ from datetime import date
 from price_checker import store
 from price_checker.checker import run_check
 from price_checker.http import Fetcher, FetchError
-from price_checker.models import Item
-from price_checker.sources import build_sources
+from price_checker.models import Item, Offer
+from price_checker.sources import build_sources, describe
 from price_checker.sources.pages import extract_offers
 
 
@@ -58,7 +58,7 @@ def cmd_list(args: argparse.Namespace) -> int:
         return 0
     for item in items:
         best = (latest.get(item.id) or {}).get("best")
-        now = f"{_money(best['price'])} at {best.get('seller') or best['source']}" if best else "not checked yet"
+        now = f"{_money(best['price'])} at {Offer.from_dict(best).where()}" if best else "not checked yet"
         print(f"{item.id:32} target {_money(item.target_price):>10}   now {now}")
     return 0
 
@@ -70,7 +70,8 @@ def cmd_check(args: argparse.Namespace) -> int:
         if not items:
             print("No matching items", file=sys.stderr)
             return 1
-    sources = build_sources(Fetcher())
+    sources = build_sources(Fetcher(), items, store.data_dir())
+    print(f"Sources: {describe(sources)}")
     run = run_check(items, sources, on_item=lambda i: print(f"Checking {i.name}...", flush=True))
     if not args.dry_run:
         store.append_history(run)
