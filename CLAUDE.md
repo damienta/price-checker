@@ -40,6 +40,12 @@ The user will name products or paste links in chat. For each one:
 Target price: use what the user says. If they don't give one, ask, or suggest the current best
 price minus about 10%.
 
+## Architecture decisions
+
+Read `docs/adr/` before changing how data is stored, scheduled, fetched or sent. When you make
+a decision of that size (new storage, new hosting, a new kind of source, anything with a cost
+or a legal angle), add an ADR from `docs/adr/template.md` and list it in `docs/adr/README.md`.
+
 ## Rules
 
 - Respect robots.txt: the fetcher enforces it, so never work around a "robots.txt asks bots not
