@@ -3,11 +3,15 @@
 from __future__ import annotations
 
 import argparse
+import os
 import sys
-from datetime import date
+from datetime import date, datetime, timezone
+from pathlib import Path
 
-from price_checker import store
+from price_checker import discord, store
 from price_checker.checker import run_check
+from price_checker.digest import build_digest
+from price_checker.findings import load_findings
 from price_checker.http import Fetcher, FetchError
 from price_checker.models import Item, Offer
 from price_checker.sources import build_sources, describe
@@ -112,6 +116,42 @@ def cmd_probe(args: argparse.Namespace) -> int:
     return 0
 
 
+def _webhook() -> str | None:
+    url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
+    if not url:
+        print("DISCORD_WEBHOOK_URL is not set", file=sys.stderr)
+    return url or None
+
+
+def cmd_digest(args: argparse.Namespace) -> int:
+    now = datetime.now(timezone.utc)
+    base = store.data_dir()
+    paths = [Path(p) for p in args.findings] if args.findings else [base / "claude_findings.json"]
+    message = build_digest(
+        store.load_watchlist(),
+        store.load_latest(),
+        store.load_history(),
+        load_findings(paths, now),
+        now,
+    )
+    print(message)
+    if args.post:
+        webhook = _webhook()
+        if not webhook:
+            return 1
+        discord.post(webhook, message)
+        print("\nPosted to Discord.")
+    return 0
+
+
+def cmd_notify(args: argparse.Namespace) -> int:
+    webhook = _webhook()
+    if not webhook:
+        return 1
+    discord.post(webhook, args.message)
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="price-checker", description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
@@ -144,6 +184,17 @@ def build_parser() -> argparse.ArgumentParser:
     probe = sub.add_parser("probe", help="show the prices the script can read from a URL")
     probe.add_argument("url")
     probe.set_defaults(func=cmd_probe)
+
+    digest = sub.add_parser("digest", help="build the morning message from the latest check")
+    digest.add_argument("--post", action="store_true", help="send it to DISCORD_WEBHOOK_URL")
+    digest.add_argument(
+        "--findings", action="append", help="Claude findings file(s); the newest is used (repeatable)"
+    )
+    digest.set_defaults(func=cmd_digest)
+
+    notify = sub.add_parser("notify", help="send a one-off message to Discord")
+    notify.add_argument("message")
+    notify.set_defaults(func=cmd_notify)
 
     return parser
 

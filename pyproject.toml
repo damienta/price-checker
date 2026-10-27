@@ -5,7 +5,7 @@ description = "Personal UK price tracker: checks product pages, price comparison
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-dependencies = ["httpx>=0.27"]
+dependencies = ["httpx>=0.27", "tzdata; sys_platform == 'win32'"]
 
 [project.scripts]
 price-checker = "price_checker.cli:main"
