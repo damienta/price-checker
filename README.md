@@ -69,6 +69,7 @@ uv run pytest -q
 ```
 
 Setup: **[docs/SETUP.md](docs/SETUP.md)**. The Claude routine: [docs/claude-routine.md](docs/claude-routine.md).
+Why it's built this way: [docs/adr/](docs/adr/README.md).
 
 > This repo is public, so the watchlist and price history are public too. Secrets (Discord
 > webhook, API keys) live only in GitHub Actions secrets.
