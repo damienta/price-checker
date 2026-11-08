@@ -1,3 +1,33 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "airpods-pro-3",
+      "name": "Apple AirPods Pro 3",
+      "target_price": 160.0,
+      "condition": "new",
+      "keywords": [
+        "airpods pro 3"
+      ],
+      "exclude": [
+        "case",
+        "cover",
+        "for",
+        "compatible",
+        "tips",
+        "replacement",
+        "strap"
+      ],
+      "min_price": 70.0,
+      "urls": [
+        "https://pricespy.co.uk/product.php?p=15415649"
+      ],
+      "hotukdeals_tags": [
+        "airpods-pro",
+        "apple-airpods"
+      ],
+      "search": true,
+      "added": "2026-11-08",
+      "notes": "White, USB-C MagSafe case (MFHP4ZM/A). RRP £219."
+    }
+  ]
 }
