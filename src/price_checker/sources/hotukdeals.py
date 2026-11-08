@@ -6,6 +6,7 @@ allows. The site's search pages are disallowed for bots, so tags are how we narr
 
 from __future__ import annotations
 
+import re
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
@@ -79,14 +80,21 @@ class HotUKDealsSource:
         )
 
 
+_TEMPERATURE = re.compile(r"^\s*(-?\d+)°\s*-\s*")
+
+
 def parse_feed(xml_text: str) -> list[dict[str, str]]:
     root = ET.fromstring(xml_text)
     entries = []
     for node in root.iter("item"):
-        entry = {
-            "title": (node.findtext("title") or "").strip(),
-            "link": (node.findtext("link") or "").strip(),
-        }
+        title = (node.findtext("title") or "").strip()
+        entry = {"link": (node.findtext("link") or "").strip()}
+        # The "hot" feed prefixes titles with the community vote score: "107° - LEGO ...".
+        if match := _TEMPERATURE.match(title):
+            entry["temperature"] = match.group(1)
+            title = title[match.end():]
+        entry["title"] = title
+        entry["category"] = (node.findtext("category") or "").strip()
         when = node.findtext("pubDate")
         if when:
             try:
@@ -98,5 +106,8 @@ def parse_feed(xml_text: str) -> list[dict[str, str]]:
             if child.tag.endswith("}merchant") or child.tag == "merchant":
                 entry["merchant"] = child.get("name", "")
                 entry["price"] = child.get("price", "")
+            elif child.tag.endswith("}content") and child.get("url"):
+                # Thumbnails are 150x150; the same path serves 300x300.
+                entry["image"] = child.get("url", "").replace("/re/150x150/", "/re/300x300/")
         entries.append(entry)
     return entries

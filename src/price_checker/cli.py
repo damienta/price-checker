@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 from datetime import date, datetime, timezone
@@ -11,6 +12,7 @@ from pathlib import Path
 from price_checker import discord, schedule, store
 from price_checker.checker import run_check
 from price_checker.digest import build_digest
+from price_checker.feed import build_feed, load_interests
 from price_checker.findings import load_findings
 from price_checker.http import Fetcher, FetchError
 from price_checker.models import Item, Offer
@@ -145,6 +147,21 @@ def cmd_digest(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_feed(args: argparse.Namespace) -> int:
+    base = store.data_dir()
+    feed = build_feed(Fetcher(), load_interests(base / "interests.json"), store.load_watchlist())
+    (base / "feed.json").write_text(
+        json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    for deal in feed["deals"][: args.show]:
+        price = _money(deal["price"]) if deal["price"] is not None else "?"
+        print(f"{deal['score']:6.1f}  {price:>9}  {deal['merchant'][:14]:14}  {deal['title'][:70]}")
+    for error in feed["errors"]:
+        print(f"  ! {error['feed']}: {error['reason']}")
+    print(f"\n{len(feed['deals'])} deals written to {base / 'feed.json'}")
+    return 0
+
+
 def cmd_due(args: argparse.Namespace) -> int:
     """Print "true" or "false" for the workflow's gate step, and why on stderr."""
     now = datetime.now(timezone.utc)
@@ -207,6 +224,10 @@ def build_parser() -> argparse.ArgumentParser:
     notify.set_defaults(func=cmd_notify)
 
     sub.add_parser("due", help="whether today's digest still needs posting").set_defaults(func=cmd_due)
+
+    feed = sub.add_parser("feed", help="build the For you feed from HotUKDeals into data/feed.json")
+    feed.add_argument("--show", type=int, default=15, help="how many to print")
+    feed.set_defaults(func=cmd_feed)
 
     return parser
 

@@ -15,6 +15,8 @@ users, a database) can be made knowing what each choice was trading off.
 | [0008](0008-optional-api-sources-behind-keys.md) | Keep paid-tier APIs optional and budgeted | Accepted |
 | [0009](0009-claude-as-second-opinion.md) | Use Claude as a second opinion, not the main checker | Accepted |
 | [0010](0010-how-prices-are-verified.md) | How prices are verified before you're alerted | Accepted |
+| [0011](0011-static-site-reading-data-from-github.md) | A static website that reads data straight from GitHub | Accepted |
+| [0012](0012-for-you-feed-from-hotukdeals.md) | A "For you" feed built from HotUKDeals RSS | Accepted |
 
 ## Adding one
 
