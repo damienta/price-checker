@@ -8,7 +8,7 @@ import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
 
-from price_checker import discord, store
+from price_checker import discord, schedule, store
 from price_checker.checker import run_check
 from price_checker.digest import build_digest
 from price_checker.findings import load_findings
@@ -140,7 +140,17 @@ def cmd_digest(args: argparse.Namespace) -> int:
         if not webhook:
             return 1
         discord.post(webhook, message)
+        schedule.record_posted(base / "digest_state.json", now)
         print("\nPosted to Discord.")
+    return 0
+
+
+def cmd_due(args: argparse.Namespace) -> int:
+    """Print "true" or "false" for the workflow's gate step, and why on stderr."""
+    now = datetime.now(timezone.utc)
+    due, reason = schedule.is_due(now, schedule.last_posted(store.data_dir() / "digest_state.json"))
+    print("true" if due else "false")
+    print(reason, file=sys.stderr)
     return 0
 
 
@@ -195,6 +205,8 @@ def build_parser() -> argparse.ArgumentParser:
     notify = sub.add_parser("notify", help="send a one-off message to Discord")
     notify.add_argument("message")
     notify.set_defaults(func=cmd_notify)
+
+    sub.add_parser("due", help="whether today's digest still needs posting").set_defaults(func=cmd_due)
 
     return parser
 
