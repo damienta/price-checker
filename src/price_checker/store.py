@@ -130,7 +130,9 @@ def append_history(run: CheckRun, base: Path | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     new_file = not path.exists()
     with path.open("a", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=HISTORY_FIELDS, extrasaction="ignore")
+        writer = csv.DictWriter(
+            fh, fieldnames=HISTORY_FIELDS, extrasaction="ignore", lineterminator="\n"
+        )
         if new_file:
             writer.writeheader()
         for offer in run.offers:

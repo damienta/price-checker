@@ -20,12 +20,25 @@ somewhere to write results.
 
 ## Decision
 
-GitHub Actions, `.github/workflows/check.yml`. GitHub cron is UTC with no daylight saving, so it's
-scheduled at both 07:00 and 08:00 UTC and a gate step keeps whichever is 8am in London.
+GitHub Actions, `.github/workflows/check.yml`.
+
+**Updated 2026-11-08.** The first version ran at 07:00 and 08:00 UTC and only went ahead if it
+was exactly 8am in London. In practice GitHub started every scheduled run 6 to 10 hours late
+(around 2pm to 6pm), so every run was skipped and no digest was ever posted. Now:
+
+- The workflow is scheduled several times a day at odd minutes (:41), since on-the-hour
+  schedules are the most delayed.
+- `price-checker due` lets a scheduled run go ahead if it's after 8am UK time and nothing has
+  been posted today. Posting records the UK date in `data/digest_state.json`, so later runs skip.
+- For an exact 8am, an external free scheduler (cron-job.org) calls the workflow's
+  `workflow_dispatch` endpoint at 08:00 Europe/London. Dispatched runs always go ahead.
 
 ## Consequences
 
-- Scheduled runs can start 10 to 30 minutes late. Fine for a morning digest.
+- Without the external trigger, the digest arrives on the first scheduled run after 8am, which
+  may be the afternoon. With it, it arrives at 8am.
+- The external trigger needs a fine-grained GitHub token with Actions write access to this repo
+  only, stored in cron-job.org. If that token leaks, someone can trigger runs but not change code.
 - GitHub turns off schedules in repos with no activity for 60 days. The daily data commits
   should count as activity.
 - Requests come from GitHub's data-centre IP addresses, which some shops block more readily than

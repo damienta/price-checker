@@ -49,6 +49,8 @@ SITE_NAMES = {
     "smythstoys.com": "Smyths",
     "selfridges.com": "Selfridges",
     "harveynichols.com": "Harvey Nichols",
+    "apple.com": "Apple",
+    "krcs.co.uk": "KRCS",
 }
 
 _IN_STOCK = ("instock", "limitedavailability", "onlineonly", "instoreonly", "preorder", "presale")

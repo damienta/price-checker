@@ -29,14 +29,36 @@ Treat that URL like a password: anyone who has it can post to your channel.
 
 1. Go to <https://github.com/damienta/price-checker/actions/workflows/check.yml>.
 2. **Run workflow** → **Run workflow**.
-3. Within a minute or two, Discord should say your watchlist is empty. That means it works.
+3. Within a minute or two, the digest should appear in Discord. That means it works.
 
 If the "Save prices to the repo" step fails with a permissions error, go to
 **Settings → Actions → General → Workflow permissions**, choose **Read and write permissions**
 and save.
 
-From now on it runs by itself at 8am UK time. GitHub sometimes starts scheduled runs 10 to 30
-minutes late.
+From now on it posts once a day, on the first scheduled run after 8am UK time. GitHub often
+starts scheduled runs hours late, so without step 4b that can be the afternoon.
+
+## 4b. Optional but recommended: an exact 8am trigger (free)
+
+[cron-job.org](https://cron-job.org) can start the workflow at exactly 8am.
+
+1. **Make a token.** GitHub → your avatar → **Settings** → **Developer settings** →
+   **Personal access tokens** → **Fine-grained tokens** → **Generate new token**.
+   - Repository access: **Only select repositories** → `damienta/price-checker`
+   - Permissions → Repository permissions → **Actions: Read and write** (nothing else)
+   - Expiry: up to a year. Set a reminder to renew it.
+2. **Make the job.** Sign up at cron-job.org → **Create cronjob**:
+   - URL: `https://api.github.com/repos/damienta/price-checker/actions/workflows/check.yml/dispatches`
+   - Schedule: every day at **08:00**, time zone **Europe/London**
+   - **Advanced** tab → Request method **POST**, and headers:
+     - `Authorization`: `Bearer <your token>`
+     - `Accept`: `application/vnd.github+json`
+     - `Content-Type`: `application/json`
+   - Request body: `{"ref":"main"}`
+3. **Test it** with cron-job.org's **Test run** button. GitHub replies `204`, and a new run
+   appears in the Actions tab.
+
+The later scheduled runs see today's digest has been posted and skip themselves.
 
 ## 5. Add your first items
 

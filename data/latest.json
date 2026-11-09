@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-08T18:58:29+00:00",
+  "checked_at": "2026-11-08T19:09:09+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-08T18:58:29+00:00",
+      "checked_at": "2026-11-08T19:09:09+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
@@ -18,8 +18,20 @@
         "kind": "price",
         "posted_at": ""
       },
-      "previous_best": null,
-      "previous_checked_at": null,
+      "previous_best": {
+        "item_id": "airpods-pro-3",
+        "source": "PriceSpy",
+        "price": 174.99,
+        "url": "https://pricespy.co.uk/product.php?p=15415649",
+        "seller": "cheapest of 13 shops",
+        "title": "Apple AirPods Pro 3 2025 - White",
+        "in_stock": true,
+        "condition": "new",
+        "currency": "GBP",
+        "kind": "price",
+        "posted_at": ""
+      },
+      "previous_checked_at": "2026-11-08T18:58:29+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
@@ -29,6 +41,32 @@
           "seller": "cheapest of 13 shops",
           "title": "Apple AirPods Pro 3 2025 - White",
           "in_stock": true,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "price",
+          "posted_at": ""
+        },
+        {
+          "item_id": "airpods-pro-3",
+          "source": "Apple",
+          "price": 219.0,
+          "url": "https://www.apple.com/uk/shop/product/MFHP4ZM/A/airpods-pro-3",
+          "seller": "",
+          "title": "AirPods Pro 3",
+          "in_stock": null,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "price",
+          "posted_at": ""
+        },
+        {
+          "item_id": "airpods-pro-3",
+          "source": "Krcs",
+          "price": 219.0,
+          "url": "https://www.krcs.co.uk/airpods-pro-3",
+          "seller": "",
+          "title": "AirPods Pro 3",
+          "in_stock": null,
           "condition": "new",
           "currency": "GBP",
           "kind": "price",
