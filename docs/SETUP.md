@@ -111,6 +111,20 @@ The script spends at most about 8 searches a day, rotating through your items, a
 the month before reaching the free limit. To change the budget, add a repository **variable**
 (same settings page, **Variables** tab) called `SERPAPI_MONTHLY_BUDGET`.
 
+## 9. The website and For you feed
+
+1. Go to <https://github.com/damienta/price-checker/settings/pages>.
+2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+3. Go to **Actions → Website → Run workflow**. When it finishes, the site is at
+   <https://damienta.github.io/price-checker/>.
+4. Go to **Actions → For you feed → Run workflow** to fill the feed straight away. After that
+   it refreshes itself every few hours.
+5. Edit `data/interests.json` (on GitHub with the ✏️ button, or ask Claude) to choose the tags,
+   categories and keywords the feed favours, and what to mute.
+
+The site reads prices straight from the repo, so it updates as soon as a check commits. It only
+redeploys when the website code changes.
+
 ## Good to know
 
 - **Amazon and Argos** block scripts, so they're covered by the Claude routine rather than the
@@ -118,9 +132,9 @@ the month before reaching the free limit. To change the budget, add a repository
   alert works well alongside this.
 - **"Couldn't check" lines** mean a site blocked the request or the page changed. If one keeps
   appearing, ask Claude to replace that link.
-- **Public repo:** anyone can see what you're tracking and the prices. Make the repo private if
-  that bothers you. Actions stays free for private repos at this usage (about 2 minutes a day
-  out of 2,000 free minutes a month).
+- **Public repo:** anyone can see what you're tracking and the prices. Making it private keeps
+  the Discord digest working (Actions is free at this usage), but the website would stop
+  loading data, because it reads the files from the public repo.
 - **If the 8am run stops:** GitHub turns off scheduled workflows in repos with no activity for
   60 days. The daily data commits should count as activity, but if it ever stops, re-enable it
   in the Actions tab.

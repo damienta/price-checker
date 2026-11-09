@@ -12,7 +12,13 @@ uv run price-checker list        # watchlist with latest prices
 uv run price-checker probe URL   # what the script can read from a page
 uv run price-checker add "Name" --target 250 --url URL --tag slug --keyword K --exclude W
 uv run price-checker check --item ID   # check one item now and record it
+uv run price-checker feed              # rebuild the For you feed (data/feed.json)
+cd web && npm run dev                  # website, reading the local data/ folder
 ```
+
+The website (`web/`, React + Vite + Tailwind) reads `data/*.json` at runtime. If you change a
+data file's shape, update `web/src/lib/types.ts` to match. The user's interests for the For you
+feed are in `data/interests.json`; edit it when they say what they do or don't want to see.
 
 ## When the user asks to track something
 

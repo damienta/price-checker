@@ -5,8 +5,10 @@ under £250"), and every morning at 8am a digest lands in Discord with the best 
 across UK shops, price comparison sites and deal communities.
 
 It runs for free on GitHub Actions. There is no server and no database: the watchlist and price
-history are JSON and CSV files in [`data/`](data/), committed by the morning run, ready for a
-frontend to read later.
+history are JSON and CSV files in [`data/`](data/), committed by the morning run.
+
+**Website:** <https://damienta.github.io/price-checker/> shows today's prices, price history
+and a **For you** feed of HotUKDeals deals ranked by what you follow (`web/`, React + Vite).
 
 ```
  you → Claude Code ──► data/watchlist.json
@@ -14,10 +16,31 @@ frontend to read later.
  07:15  Claude routine ───────┤  searches by name (incl. Amazon, Argos), double-checks
                               │  yesterday's prices, adds new readable links
                               ▼
- 08:00  GitHub Action ──► check every source ──► data/latest.json, data/history.csv
+ 08:00+ GitHub Action ──► check every source ──► data/latest.json, data/history.csv
                               │
                               └──► Discord webhook: one morning digest
+
+ every 3h  GitHub Action ──► HotUKDeals feeds ──► data/feed.json   (For you)
+
+ website (GitHub Pages) ◄── reads data/*.json straight from the repo
 ```
+
+## For you feed
+
+Edit [`data/interests.json`](data/interests.json) to choose what the feed favours:
+
+```json
+{
+  "tags": ["headphones", "apple", "lego"],        // HotUKDeals tag slugs, from hotukdeals.com/tag/<slug>
+  "categories": ["Electronics", "Gaming"],        // boost these categories
+  "keywords": ["OLED", "Switch 2"],               // boost titles containing these
+  "muted_categories": ["Groceries"],              // never show
+  "muted_merchants": [],
+  "muted_words": ["refurbished"]
+}
+```
+
+Watchlist items count automatically: a deal for something you track goes to the top.
 
 ## Price sources
 
@@ -65,7 +88,10 @@ uv run price-checker probe https://www.currys.co.uk/products/...   # can the scr
 uv run price-checker check            # check everything now
 uv run price-checker list             # latest prices
 uv run price-checker digest           # print the morning message (--post sends it)
+uv run price-checker feed             # rebuild the For you feed
 uv run pytest -q
+
+cd web && npm install && npm run dev  # website on localhost, reading your local data/
 ```
 
 Setup: **[docs/SETUP.md](docs/SETUP.md)**. The Claude routine: [docs/claude-routine.md](docs/claude-routine.md).
