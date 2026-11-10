@@ -1,11 +1,12 @@
 import { AlertTriangle, ArrowDownRight, ArrowUpRight, Target } from 'lucide-react'
 
 import SpotlightCard from '@/components/SpotlightCard'
+import { AddItemButton } from '@/components/add-item'
 import { Reveal, RevealItem } from '@/components/motion/reveal'
 import { AnimatedLink } from '@/components/skiper/animated-link'
 import { Sparkline } from '@/components/sparkline'
 import { priceSeries } from '@/lib/data'
-import { money, timeAgo, where } from '@/lib/format'
+import { money, shop, timeAgo, via } from '@/lib/format'
 import type { HistoryRow, LatestEntry, WatchItem } from '@/lib/types'
 
 export function Watchlist({
@@ -20,11 +21,9 @@ export function Watchlist({
   return (
     <section id="watchlist" className="py-16 sm:py-24">
       <div className="container-page">
-        <SectionTitle eyebrow="Watchlist" title="Today's best prices" />
+        <SectionTitle eyebrow="Watchlist" title="Today's best prices" aside={<AddItemButton />} />
         {items.length === 0 ? (
-          <Empty>
-            Nothing tracked yet. Open Claude Code in the repo and say "track the AirPods Pro 3 under £160".
-          </Empty>
+          <Empty>Nothing tracked yet. Use "Add item", or ask Claude Code in the repo to track something.</Empty>
         ) : (
           <Reveal className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {items.map((item) => (
@@ -45,7 +44,7 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
   const target = item.target_price
   const below = best != null && target != null && best.price <= target
   const change = best && previous ? best.price - previous.price : 0
-  const offers = (entry?.offers ?? []).filter((o) => o.kind === 'price').slice(0, 4)
+  const offers = (entry?.offers ?? []).filter((o) => o.kind === 'price').slice(0, 6)
   const errors = entry?.errors ?? []
   const toGo = best && target != null && !below ? best.price - target : null
 
@@ -65,9 +64,15 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
       <div>
         <div className="price text-4xl font-semibold">{money(best?.price)}</div>
         {best ? (
-          <AnimatedLink href={best.url} external className="mt-1 text-sm text-muted-foreground hover:text-foreground">
-            {where(best.source, best.seller)}
-          </AnimatedLink>
+          <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm">
+            <AnimatedLink href={best.url} external className="font-medium">
+              {shop(best.source, best.seller)}
+            </AnimatedLink>
+            <TrustBadge trust={best.trust} />
+            {via(best.source, best.seller) && (
+              <span className="text-xs text-muted-foreground">via {via(best.source, best.seller)}</span>
+            )}
+          </div>
         ) : (
           <p className="mt-1 text-sm text-muted-foreground">No price found yet</p>
         )}
@@ -87,16 +92,30 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
 
       {offers.length > 0 && (
         <ul className="space-y-1.5 border-t border-border pt-4 text-sm">
-          {offers.map((o) => (
-            <li key={`${o.source}-${o.url}-${o.price}`} className="flex items-baseline justify-between gap-3">
-              <AnimatedLink href={o.url} external className="truncate text-muted-foreground hover:text-foreground">
-                {where(o.source, o.seller)}
-              </AnimatedLink>
-              <span className={`price shrink-0 ${o === offers[0] ? 'text-foreground' : 'text-muted-foreground'}`}>
-                {money(o.price)}
-              </span>
-            </li>
-          ))}
+          {offers.map((o) => {
+            const blocked = o.trust === 'blocked'
+            const isBest = best != null && o.price === best.price && o.seller === best.seller && o.source === best.source
+            return (
+              <li
+                key={`${o.source}-${o.seller}-${o.price}`}
+                className={`flex items-center justify-between gap-3 ${blocked ? 'opacity-50' : ''}`}
+              >
+                <span className="flex min-w-0 items-center gap-2">
+                  <AnimatedLink
+                    href={o.url}
+                    external
+                    className={`truncate text-muted-foreground hover:text-foreground ${blocked ? 'line-through' : ''}`}
+                  >
+                    {shop(o.source, o.seller)}
+                  </AnimatedLink>
+                  <TrustBadge trust={o.trust} compact />
+                </span>
+                <span className={`price shrink-0 ${isBest ? 'text-foreground' : 'text-muted-foreground'} ${blocked ? 'line-through' : ''}`}>
+                  {money(o.price)}
+                </span>
+              </li>
+            )
+          })}
         </ul>
       )}
 
@@ -110,6 +129,24 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
         )}
       </div>
     </SpotlightCard>
+  )
+}
+
+const TRUST_COPY = {
+  blocked: { label: 'Blocked', title: 'On your blocked list in data/shops.json. Never counted as the best price.', cls: 'bg-destructive/10 text-destructive' },
+  unverified: { label: 'Unverified', title: "Not on your trusted list. Check the seller's reviews before buying.", cls: 'bg-hot/10 text-hot' },
+} as const
+
+function TrustBadge({ trust, compact = false }: { trust?: string; compact?: boolean }) {
+  if (trust !== 'blocked' && trust !== 'unverified') return null
+  const copy = TRUST_COPY[trust]
+  return (
+    <span
+      title={copy.title}
+      className={`shrink-0 rounded-full font-medium ${copy.cls} ${compact ? 'px-1.5 text-[10px]' : 'px-2 py-0.5 text-[11px]'}`}
+    >
+      {copy.label}
+    </span>
   )
 }
 

@@ -7,6 +7,7 @@ from typing import Callable
 
 from price_checker.models import CheckError, CheckRun, Item
 from price_checker.sources import Source
+from price_checker.trust import ShopTrust
 
 
 def run_check(
@@ -14,6 +15,7 @@ def run_check(
     sources: list[Source],
     now: datetime | None = None,
     on_item: Callable[[Item], None] | None = None,
+    trust: ShopTrust | None = None,
 ) -> CheckRun:
     now = now or datetime.now(timezone.utc)
     run = CheckRun(checked_at=now.isoformat(timespec="seconds"))
@@ -28,4 +30,5 @@ def run_check(
                 continue
             run.offers.extend(offers)
             run.errors.extend(errors)
+    (trust or ShopTrust()).apply(run.offers)
     return run

@@ -107,6 +107,8 @@ def _place_item(
 
     line = f"**{item.name}**: **{money(best.price)}** at {link(best.where(), best.url)}"
     notes = []
+    if best.trust == "unverified":
+        notes.append("⚠️ unverified shop")
     if item.target_price:
         notes.append(f"target {money(item.target_price)}")
     if previous and abs(best.price - previous.price) >= 0.01:
@@ -123,6 +125,10 @@ def _place_item(
     low = lowest_since(earlier, item, 30, now)
     if low is not None and best.price < low:
         notes.append("lowest in 30 days")
+    blocked = [o for o in offers if o.trust == "blocked" and o.kind == "price" and o.price < best.price]
+    if blocked:
+        cheapest = min(blocked, key=lambda o: o.price)
+        notes.append(f"ignored {cheapest.seller or cheapest.source} at {money(cheapest.price)} (blocked shop)")
     if notes:
         line += " · " + " · ".join(notes)
 

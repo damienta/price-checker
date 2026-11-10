@@ -15,9 +15,14 @@ export function timeAgo(iso: string | null | undefined, now = Date.now()): strin
   return days === 1 ? 'yesterday' : `${days} days ago`
 }
 
-/** "Currys", "OnBuy via PriceRunner", "PriceSpy · cheapest of 13 shops" */
-export function where(source: string, seller: string): string {
-  if (seller.startsWith('cheapest of')) return `${source} · ${seller}`
-  if (seller && seller.toLowerCase() !== source.toLowerCase()) return `${seller} via ${source}`
-  return source
+/** The shop you'd buy from: the seller a comparison site names, otherwise the site itself. */
+export function shop(source: string, seller: string): string {
+  if (!seller || seller.startsWith('cheapest of')) return source
+  return seller
+}
+
+/** "PriceSpy" when the shop came from a comparison site, otherwise null. */
+export function via(source: string, seller: string): string | null {
+  const name = shop(source, seller)
+  return name.toLowerCase() === source.toLowerCase() ? null : source
 }

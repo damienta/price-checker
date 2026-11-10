@@ -31,6 +31,7 @@ HISTORY_FIELDS = [
     "kind",
     "url",
     "title",
+    "trust",
 ]
 
 
@@ -128,6 +129,7 @@ def save_latest(items: list[Item], run: CheckRun, base: Path | None = None) -> d
 def append_history(run: CheckRun, base: Path | None = None) -> None:
     path = (base or data_dir()) / "history.csv"
     path.parent.mkdir(parents=True, exist_ok=True)
+    _upgrade_history_header(path)
     new_file = not path.exists()
     with path.open("a", newline="", encoding="utf-8") as fh:
         writer = csv.DictWriter(
@@ -140,6 +142,23 @@ def append_history(run: CheckRun, base: Path | None = None) -> None:
             row["checked_at"] = run.checked_at
             row["in_stock"] = "" if offer.in_stock is None else str(offer.in_stock).lower()
             writer.writerow(row)
+
+
+def _upgrade_history_header(path: Path) -> None:
+    """Rewrite an older history.csv with today's columns, leaving new ones blank."""
+    if not path.exists():
+        return
+    with path.open(newline="", encoding="utf-8") as fh:
+        reader = csv.DictReader(fh)
+        if reader.fieldnames == HISTORY_FIELDS:
+            return
+        rows = list(reader)
+    with path.open("w", newline="", encoding="utf-8") as fh:
+        writer = csv.DictWriter(
+            fh, fieldnames=HISTORY_FIELDS, extrasaction="ignore", lineterminator="\n"
+        )
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def load_history(base: Path | None = None) -> list[dict[str, str]]:
@@ -158,6 +177,10 @@ def lowest_since(
     prices = []
     for row in history:
         if row.get("item_id") != item.id:
+            continue
+        # Older PriceSpy rows recorded "lowest of N shops" without saying which shop, so they
+        # may be a shop now blocked. Leave them out.
+        if (row.get("seller") or "").startswith("cheapest of"):
             continue
         try:
             when = datetime.fromisoformat(row["checked_at"])

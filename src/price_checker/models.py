@@ -66,6 +66,8 @@ class Offer:
     # "price" for a listing we track, "deal" for a one-off post such as HotUKDeals.
     kind: str = "price"
     posted_at: str = ""
+    # "trusted", "unverified" or "blocked"; set by trust.ShopTrust from data/shops.json.
+    trust: str = "unverified"
 
     @classmethod
     def from_dict(cls, data: dict[str, Any]) -> Offer:
@@ -76,10 +78,9 @@ class Offer:
         return asdict(self)
 
     def where(self) -> str:
-        """Human label such as "Currys", "OnBuy (via PriceRunner)" or
-        "PriceSpy (cheapest of 11 shops)"."""
+        """Human label: the shop, e.g. "Currys" or "Gadcet (via PriceSpy)"."""
         if self.seller.startswith("cheapest of"):
-            return f"{self.source} ({self.seller})"
+            return self.source
         if self.seller and self.seller.lower() != self.source.lower():
             return f"{self.seller} (via {self.source})"
         return self.source

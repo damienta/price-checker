@@ -67,6 +67,17 @@ def test_sections():
     assert text.startswith("## ☀️ Price check · Mon 26 Oct")
 
 
+def test_unverified_best_and_ignored_blocked_shop_are_called_out():
+    item = Item(id="a", name="AirPods Pro 3")
+    best = offer("a", "PriceSpy", 194.99, seller="Gadcet", trust="unverified")
+    blocked = offer("a", "PriceSpy", 174.99, seller="OnBuy", trust="blocked")
+    latest = {"items": {"a": entry(best, offers=[blocked, best])}}
+    text = build_digest([item], latest, [], [], NOW)
+    assert "**£194.99** at [Gadcet (via PriceSpy)]" in text
+    assert "⚠️ unverified shop" in text
+    assert "ignored OnBuy at £174.99 (blocked shop)" in text
+
+
 def test_deals_only_announced_once():
     item = Item(id="x", name="Thing")
     deal_old = offer("x", "HotUKDeals", 50.0, kind="deal", posted_at="2026-10-25T06:00:00+00:00", title="Old deal")

@@ -67,7 +67,7 @@ def condition_from_title(title: str) -> str:
 
 def acceptable(item: Item, offer: Offer) -> bool:
     """Whether an offer can count as the item's best price."""
-    if offer.currency != "GBP" or offer.in_stock is False:
+    if offer.currency != "GBP" or offer.in_stock is False or offer.trust == "blocked":
         return False
     if item.condition == "new" and offer.condition not in ("new", "unknown"):
         return False

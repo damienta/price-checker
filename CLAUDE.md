@@ -16,6 +16,13 @@ uv run price-checker feed              # rebuild the For you feed (data/feed.jso
 cd web && npm run dev                  # website, reading the local data/ folder
 ```
 
+`data/shops.json` decides which shops count: `blocked` ones (OnBuy and other marketplaces) are
+shown but never the best price, `trusted` ones are known UK retailers, anything else is labelled
+unverified. When the user says they do or don't trust a shop, edit that file.
+
+Items can also be added from the website: it opens a GitHub issue (`.github/ISSUE_TEMPLATE/track.yml`)
+and `.github/workflows/track.yml` runs `price-checker add-from-issue`.
+
 The website (`web/`, React + Vite + Tailwind) reads `data/*.json` at runtime. If you change a
 data file's shape, update `web/src/lib/types.ts` to match. The user's interests for the For you
 feed are in `data/interests.json`; edit it when they say what they do or don't want to see.

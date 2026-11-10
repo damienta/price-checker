@@ -123,6 +123,20 @@ section[id] {
   letter-spacing: -0.02em;
 }
 
+@utility input-field {
+  background-color: rgb(255 255 255 / 0.03);
+  border-color: rgb(255 255 255 / 0.1);
+  color: #f1f5f9;
+  outline: none;
+  &::placeholder {
+    color: #64748b;
+  }
+  &:focus-visible {
+    border-color: rgb(163 230 53 / 0.6);
+    box-shadow: 0 0 0 3px rgb(163 230 53 / 0.15);
+  }
+}
+
 @utility bg-dots {
   background-image: radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px);
   background-size: 22px 22px;

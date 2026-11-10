@@ -15,9 +15,11 @@ from price_checker.digest import build_digest
 from price_checker.feed import build_feed, load_interests
 from price_checker.findings import load_findings
 from price_checker.http import Fetcher, FetchError
+from price_checker.issue import add_from_issue
 from price_checker.models import Item, Offer
 from price_checker.sources import build_sources, describe
 from price_checker.sources.pages import extract_offers
+from price_checker.trust import ShopTrust
 
 
 def _money(value: float | None) -> str:
@@ -78,7 +80,12 @@ def cmd_check(args: argparse.Namespace) -> int:
             return 1
     sources = build_sources(Fetcher(), items, store.data_dir())
     print(f"Sources: {describe(sources)}")
-    run = run_check(items, sources, on_item=lambda i: print(f"Checking {i.name}...", flush=True))
+    run = run_check(
+        items,
+        sources,
+        on_item=lambda i: print(f"Checking {i.name}...", flush=True),
+        trust=ShopTrust.load(store.data_dir() / "shops.json"),
+    )
     if not args.dry_run:
         store.append_history(run)
         latest = store.save_latest(items, run)
@@ -89,6 +96,8 @@ def cmd_check(args: argparse.Namespace) -> int:
         print(f"\n{item.name}")
         for offer in offers:
             flags = [] if offer.condition == "new" else [offer.condition]
+            if offer.trust != "trusted":
+                flags.append(offer.trust)
             if offer.in_stock is False:
                 flags.append("out of stock")
             extra = f" [{', '.join(flags)}]" if flags else ""
@@ -108,13 +117,16 @@ def cmd_probe(args: argparse.Namespace) -> int:
     except FetchError as exc:
         print(f"Can't read {args.url}: {exc}")
         return 1
-    offers = extract_offers(page, args.url)
+    offers = ShopTrust.load(store.data_dir() / "shops.json").apply(extract_offers(page, args.url))
     if not offers:
         print("Page loaded but no GBP price was found in its structured data.")
         return 1
     for offer in sorted(offers, key=lambda o: o.price):
         stock = {True: "in stock", False: "out of stock", None: "stock unknown"}[offer.in_stock]
-        print(f"{_money(offer.price):>10}  {offer.where()}  {offer.condition}, {stock}  {offer.title}")
+        print(
+            f"{_money(offer.price):>10}  {offer.where()}  "
+            f"{offer.trust}, {offer.condition}, {stock}  {offer.title}"
+        )
     return 0
 
 
@@ -160,6 +172,21 @@ def cmd_feed(args: argparse.Namespace) -> int:
         print(f"  ! {error['feed']}: {error['reason']}")
     print(f"\n{len(feed['deals'])} deals written to {base / 'feed.json'}")
     return 0
+
+
+def cmd_add_from_issue(args: argparse.Namespace) -> int:
+    """Used by the track workflow: reads the issue body from ISSUE_BODY, writes a reply file."""
+    item, reply = add_from_issue(os.environ.get("ISSUE_BODY", ""))
+    if item:
+        sources = build_sources(Fetcher(), [item], store.data_dir())
+        run = run_check([item], sources, trust=ShopTrust.load(store.data_dir() / "shops.json"))
+        store.append_history(run)
+        best = store.save_latest([item], run)["items"][item.id]["best"]
+        if best:
+            reply += f"\n\nBest price right now: **{_money(best['price'])}** at {Offer.from_dict(best).where()}."
+    Path(args.reply).write_text(reply + "\n", encoding="utf-8")
+    print(reply)
+    return 0 if item else 1
 
 
 def cmd_due(args: argparse.Namespace) -> int:
@@ -224,6 +251,10 @@ def build_parser() -> argparse.ArgumentParser:
     notify.set_defaults(func=cmd_notify)
 
     sub.add_parser("due", help="whether today's digest still needs posting").set_defaults(func=cmd_due)
+
+    from_issue = sub.add_parser("add-from-issue", help="add an item from the GitHub issue in ISSUE_BODY")
+    from_issue.add_argument("--reply", default="issue-reply.md", help="where to write the issue comment")
+    from_issue.set_defaults(func=cmd_add_from_issue)
 
     feed = sub.add_parser("feed", help="build the For you feed from HotUKDeals into data/feed.json")
     feed.add_argument("--show", type=int, default=15, help="how many to print")
