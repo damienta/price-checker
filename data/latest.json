@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-11-08T19:19:12+00:00",
+  "checked_at": "2026-11-10T15:14:32+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-08T19:19:12+00:00",
+      "checked_at": "2026-11-10T15:14:32+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
         "price": 174.99,
         "url": "https://pricespy.co.uk/product.php?p=15415649",
-        "seller": "cheapest of 13 shops",
+        "seller": "cheapest of 14 shops",
         "title": "Apple AirPods Pro 3 2025 - White",
         "in_stock": true,
         "condition": "new",
@@ -31,14 +31,14 @@
         "kind": "price",
         "posted_at": ""
       },
-      "previous_checked_at": "2026-11-08T19:09:09+00:00",
+      "previous_checked_at": "2026-11-08T19:19:12+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
           "source": "PriceSpy",
           "price": 174.99,
           "url": "https://pricespy.co.uk/product.php?p=15415649",
-          "seller": "cheapest of 13 shops",
+          "seller": "cheapest of 14 shops",
           "title": "Apple AirPods Pro 3 2025 - White",
           "in_stock": true,
           "condition": "new",
