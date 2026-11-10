@@ -14,7 +14,7 @@ import os
 import re
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from price_checker.matching import acceptable, best_offer
 from price_checker.models import CheckRun, Item, Offer
@@ -180,6 +180,21 @@ def _upgrade_history_header(path: Path) -> None:
         )
         writer.writeheader()
         writer.writerows(rows)
+
+
+def drop_history_rows(should_drop: Callable[[dict[str, str]], bool], base: Path | None = None) -> int:
+    """Delete matching rows from history.csv (e.g. a shop you've since blocked). Returns how many."""
+    path = (base or data_dir()) / "history.csv"
+    rows = load_history(base)
+    kept = [r for r in rows if not should_drop(r)]
+    if len(kept) != len(rows):
+        with path.open("w", newline="", encoding="utf-8") as fh:
+            writer = csv.DictWriter(
+                fh, fieldnames=HISTORY_FIELDS, extrasaction="ignore", lineterminator="\n"
+            )
+            writer.writeheader()
+            writer.writerows(kept)
+    return len(rows) - len(kept)
 
 
 def load_history(base: Path | None = None) -> list[dict[str, str]]:

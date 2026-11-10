@@ -30,5 +30,6 @@ def run_check(
                 continue
             run.offers.extend(offers)
             run.errors.extend(errors)
-    (trust or ShopTrust()).apply(run.offers)
+    # Blocked shops are dropped entirely: not saved, not in the digest, not on the site.
+    run.offers = [o for o in (trust or ShopTrust()).apply(run.offers) if o.trust != "blocked"]
     return run

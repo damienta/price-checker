@@ -4,10 +4,10 @@ PriceSpy's structured data only gives "lowest price across N shops", which hides
 selling. The page also server-renders its first few shop offers, cheapest first. Each one
 has the shop's logo (alt text = shop name) and a screen-reader label ending in the price:
 
-    <img alt="OnBuy" ...> ... <a data-test="OfferClickoutButton">
+    <img alt="OnBuy" ...> ... <a href="https://pricespy.co.uk/go-to-shop/..." data-test="OfferClickoutButton">
       <span class="sr-only">OnBuy, Apple AirPods Pro 3 ..., £174.99</span>
 
-We read those. If PriceSpy changes its markup, `extract_offers` falls back to the
+We read those, and keep each link so a click goes to that shop rather than the PriceSpy page. If PriceSpy changes its markup, `extract_offers` falls back to the
 structured-data lowest price, so the item doesn't go dark.
 """
 
@@ -21,8 +21,10 @@ from price_checker.models import Offer
 
 _ROW = re.compile(r'data-sentry-component="OfferListItemTopLeft"')
 _LOGO = re.compile(r'<img[^>]*\salt="([^"]+)"')
+# The clickout link (PriceSpy's redirect to that shop's page) and its screen-reader label.
 _LABEL = re.compile(
-    r'data-test="OfferClickoutButton"[^>]*>\s*<span class="sr-only">(.*?)</span>', re.DOTALL
+    r'<a[^>]*?href="([^"]+)"[^>]*data-test="OfferClickoutButton"[^>]*>\s*<span class="sr-only">(.*?)</span>',
+    re.DOTALL,
 )
 _PRICE_AT_END = re.compile(r",\s*(£[\d,]+(?:\.\d+)?)\s*$")
 _OUT_OF_STOCK = re.compile(r"out of stock|not in stock|sold out", re.IGNORECASE)
@@ -41,7 +43,8 @@ def shop_offers(page: str, url: str, item_id: str = "") -> list[Offer]:
         if not logo or not label:
             continue
         shop = html_lib.unescape(logo.group(1)).strip()
-        text = html_lib.unescape(label.group(1)).strip()
+        link = html_lib.unescape(label.group(1))
+        text = html_lib.unescape(label.group(2)).strip()
         price_match = _PRICE_AT_END.search(text)
         price = parse_price(price_match.group(1)) if price_match else None
         if not shop or price is None:
@@ -53,7 +56,7 @@ def shop_offers(page: str, url: str, item_id: str = "") -> list[Offer]:
                 item_id=item_id,
                 source="PriceSpy",
                 price=price,
-                url=url,
+                url=link if link.startswith("https://") else url,
                 seller=shop,
                 title=title,
                 in_stock=False if _OUT_OF_STOCK.search(row[:6000]) else True,
