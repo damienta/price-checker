@@ -1,0 +1,21 @@
+name: Debug PriceRunner (temporary)
+on:
+  push:
+    branches: [fix/no-webhook-warning]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: What does PriceRunner send GitHub's servers?
+        run: |
+          URL="https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices"
+          curl -s -L -A "Mozilla/5.0 (compatible; price-checker/0.1; +https://github.com/damienta/price-checker)" \
+            -D headers.txt -o page.html -w "status=%{http_code} final=%{url_effective} bytes=%{size_download}\n" "$URL"
+          grep -i "^location\|^set-cookie\|^content-language" headers.txt | cut -c1-150 || true
+          grep -o '<title>[^<]*' page.html | head -1
+          echo "offers marker: $(grep -c '"offers":\[{"id":"' page.html)"
+          echo "merchants marker: $(grep -c '"merchants":{' page.html)"
+          echo "af_MERCHANT: $(grep -c 'af_MERCHANT' page.html)"
+          echo "ld+json: $(grep -c 'application/ld+json' page.html)"
+          grep -o '"currency":"[A-Z]*"\|"market":"[A-Za-z_]*"\|"locale":"[a-zA-Z_-]*"' page.html | sort | uniq -c | head
+          head -c 1500 page.html | tr -d '\n' | cut -c1-1500

@@ -135,3 +135,13 @@ def test_post_retries_rate_limit():
     assert len(calls) == 2
     assert calls[-1]["content"] == "hello"
     assert calls[-1]["allowed_mentions"] == {"parse": []}
+
+
+def test_digest_without_webhook_warns_and_still_counts_as_done(tmp_path, monkeypatch):
+    from price_checker import cli, schedule
+
+    monkeypatch.setenv("PRICE_CHECKER_DATA", str(tmp_path))
+    monkeypatch.delenv("DISCORD_WEBHOOK_URL", raising=False)
+    assert cli.main(["digest", "--post"]) == 0
+    assert schedule.last_posted(tmp_path / "digest_state.json") is not None
+    assert cli.main(["notify", "hello"]) == 0
