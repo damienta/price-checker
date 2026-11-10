@@ -63,3 +63,21 @@ def test_issue_without_product_is_refused(tmp_path, monkeypatch):
     monkeypatch.setenv("PRICE_CHECKER_DATA", str(tmp_path))
     item, reply = add_from_issue("### Product\n\n_No response_\n")
     assert item is None and "couldn't find" in reply
+
+
+def test_remove_from_issue_by_id_or_name(tmp_path, monkeypatch):
+    from price_checker.issue import remove_from_issue
+    from price_checker.models import CheckRun, Item, Offer
+
+    monkeypatch.setenv("PRICE_CHECKER_DATA", str(tmp_path))
+    items = [Item(id="airpods-pro-3", name="Apple AirPods Pro 3"), Item(id="kettle", name="Kettle")]
+    store.save_watchlist(items, tmp_path)
+    store.save_latest(items, CheckRun("t", [Offer("kettle", "S", 30, "u")]), tmp_path)
+
+    item, reply = remove_from_issue("### Item\n\nKettle\n")
+    assert item.id == "kettle" and "Removed **Kettle**" in reply
+    assert [i.id for i in store.load_watchlist(tmp_path)] == ["airpods-pro-3"]
+    assert "kettle" not in store.load_latest(tmp_path)["items"]
+
+    item, reply = remove_from_issue("### Item\n\nnot-a-thing\n")
+    assert item is None and "`airpods-pro-3`" in reply

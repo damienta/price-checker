@@ -24,6 +24,12 @@ export function issueUrl(fields: { name: string; links: string; target: string; 
   return `${REPO}/issues/new?${params}`
 }
 
+/** Opens a pre-filled "Untrack" issue; the same workflow removes the item. */
+export function untrackUrl(item: { id: string; name: string }) {
+  const params = new URLSearchParams({ template: 'untrack.yml', title: `Untrack: ${item.name}`, item: item.id })
+  return `${REPO}/issues/new?${params}`
+}
+
 export function AddItemButton({ className, size = 'default' }: { className?: string; size?: 'default' | 'sm' }) {
   const [open, setOpen] = useState(false)
   return (

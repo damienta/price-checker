@@ -22,3 +22,37 @@ checked_at,item_id,source,seller,price,currency,condition,in_stock,kind,url,titl
 2026-11-10T16:50:45+00:00,airpods-pro-3,PriceSpy,eBay,199.99,GBP,new,true,price,https://pricespy.co.uk/product.php?p=15415649,NEW Apple AirPods Pro 3 Bluetooth Headphones with MagSafe Charging Case - White,unverified
 2026-11-10T16:50:45+00:00,airpods-pro-3,Apple,,219.0,GBP,new,,price,https://www.apple.com/uk/shop/product/MFHP4ZM/A/airpods-pro-3,AirPods Pro 3,trusted
 2026-11-10T16:50:45+00:00,airpods-pro-3,KRCS,,219.0,GBP,new,,price,https://www.krcs.co.uk/airpods-pro-3,AirPods Pro 3,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceSpy,OnBuy,174.99,GBP,new,true,price,https://pricespy.co.uk/product.php?p=15415649,"Apple AirPods Pro 3 Wireless Earbuds ANC, Spatial Audio, USB-C Charging MFHP4",blocked
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceSpy,Gadcet,194.99,GBP,new,true,price,https://pricespy.co.uk/product.php?p=15415649,"Apple AirPods Pro 3 Wireless Earbuds – Noise Cancelling, Spatial Audio, Heart Rate & Hearing Features, USB-C - New",unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceSpy,A1 Tech Deals,198.99,GBP,new,true,price,https://pricespy.co.uk/product.php?p=15415649,Apple AirPods Pro 3rd Gen USB-C Wireless Earbuds - White,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceSpy,Joybuy,199.0,GBP,new,true,price,https://pricespy.co.uk/product.php?p=15415649,Apple - AirPods Pro 3,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceSpy,eBay,199.99,GBP,new,true,price,https://pricespy.co.uk/product.php?p=15415649,NEW Apple AirPods Pro 3 Bluetooth Headphones with MagSafe Charging Case - White,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,Apple,,219.0,GBP,new,,price,https://www.apple.com/uk/shop/product/MFHP4ZM/A/airpods-pro-3,AirPods Pro 3,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,KRCS,,219.0,GBP,new,,price,https://www.krcs.co.uk/airpods-pro-3,AirPods Pro 3,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,A1 Tech Deals,198.99,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Amazon,200.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Ao,200.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Apple,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Argos,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Back to the Office,226.99,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Boots,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Boots Kitchen Appliances,200.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Comet,174.99,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Currys,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Direct Computers,236.99,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,GAME,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Gadcet,194.99,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Jacamo,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,John Lewis & Partners,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Joybuy,199.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,KRCS Apple Premium Reseller,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Laptops Direct,199.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,MyTrendyPhone,204.4,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,OnBuy,174.99,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,blocked
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Scan,209.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Simply Be,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Studio,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Tesco,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,Very,219.0,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,trusted
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,eBay,262.27,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified
+2026-11-10T17:01:59+00:00,airpods-pro-3,PriceRunner,esupply.co.uk,209.95,GBP,new,true,price,https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices,,unverified

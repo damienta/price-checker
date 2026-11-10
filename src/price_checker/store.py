@@ -86,6 +86,27 @@ def upsert_item(items: list[Item], new: Item) -> tuple[list[Item], bool]:
     return [*items, new], True
 
 
+def find_item(items: list[Item], ref: str) -> Item | None:
+    """Look an item up by id, or by name (case and punctuation ignored)."""
+    ref = ref.strip()
+    return next((i for i in items if i.id == ref or i.id == slugify(ref)), None)
+
+
+def remove_item(item_id: str, base: Path | None = None) -> Item | None:
+    """Take an item off the watchlist and out of latest.json. Its history stays, so the
+    chart comes back if it's added again."""
+    base = base or data_dir()
+    items = load_watchlist(base)
+    item = find_item(items, item_id)
+    if item is None:
+        return None
+    save_watchlist([i for i in items if i.id != item.id], base)
+    latest = load_latest(base)
+    if latest.get("items", {}).pop(item.id, None) is not None:
+        _write_json(base / "latest.json", latest)
+    return item
+
+
 # --- latest.json -------------------------------------------------------------
 
 

@@ -15,7 +15,7 @@ from price_checker.digest import build_digest
 from price_checker.feed import build_feed, load_interests
 from price_checker.findings import load_findings
 from price_checker.http import Fetcher, FetchError
-from price_checker.issue import add_from_issue
+from price_checker.issue import add_from_issue, remove_from_issue
 from price_checker.models import Item, Offer
 from price_checker.sources import build_sources, describe
 from price_checker.sources.pages import extract_offers
@@ -48,13 +48,11 @@ def cmd_add(args: argparse.Namespace) -> int:
 
 
 def cmd_remove(args: argparse.Namespace) -> int:
-    items = store.load_watchlist()
-    kept = [i for i in items if i.id != args.id]
-    if len(kept) == len(items):
+    item = store.remove_item(args.id)
+    if item is None:
         print(f"No item with id {args.id}", file=sys.stderr)
         return 1
-    store.save_watchlist(kept)
-    print(f"Removed {args.id}")
+    print(f"Removed {item.id}")
     return 0
 
 
@@ -189,6 +187,14 @@ def cmd_add_from_issue(args: argparse.Namespace) -> int:
     return 0 if item else 1
 
 
+def cmd_remove_from_issue(args: argparse.Namespace) -> int:
+    """Used by the items workflow: reads ISSUE_BODY, removes the item, writes a reply file."""
+    item, reply = remove_from_issue(os.environ.get("ISSUE_BODY", ""))
+    Path(args.reply).write_text(reply + "\n", encoding="utf-8")
+    print(reply)
+    return 0 if item else 1
+
+
 def cmd_due(args: argparse.Namespace) -> int:
     """Print "true" or "false" for the workflow's gate step, and why on stderr."""
     now = datetime.now(timezone.utc)
@@ -255,6 +261,10 @@ def build_parser() -> argparse.ArgumentParser:
     from_issue = sub.add_parser("add-from-issue", help="add an item from the GitHub issue in ISSUE_BODY")
     from_issue.add_argument("--reply", default="issue-reply.md", help="where to write the issue comment")
     from_issue.set_defaults(func=cmd_add_from_issue)
+
+    untrack = sub.add_parser("remove-from-issue", help="remove the item named in the GitHub issue in ISSUE_BODY")
+    untrack.add_argument("--reply", default="issue-reply.md", help="where to write the issue comment")
+    untrack.set_defaults(func=cmd_remove_from_issue)
 
     feed = sub.add_parser("feed", help="build the For you feed from HotUKDeals into data/feed.json")
     feed.add_argument("--show", type=int, default=15, help="how many to print")

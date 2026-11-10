@@ -1,13 +1,14 @@
-import { AlertTriangle, ArrowDownRight, ArrowUpRight, Target } from 'lucide-react'
+import { AlertTriangle, ArrowDownRight, ArrowUpRight, Target, Trash2 } from 'lucide-react'
+import { useState } from 'react'
 
 import SpotlightCard from '@/components/SpotlightCard'
-import { AddItemButton } from '@/components/add-item'
+import { AddItemButton, untrackUrl } from '@/components/add-item'
 import { Reveal, RevealItem } from '@/components/motion/reveal'
 import { AnimatedLink } from '@/components/skiper/animated-link'
 import { Sparkline } from '@/components/sparkline'
 import { priceSeries } from '@/lib/data'
 import { money, shop, timeAgo, via } from '@/lib/format'
-import type { HistoryRow, LatestEntry, WatchItem } from '@/lib/types'
+import type { HistoryRow, LatestEntry, Offer, WatchItem } from '@/lib/types'
 
 export function Watchlist({
   items,
@@ -44,7 +45,10 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
   const target = item.target_price
   const below = best != null && target != null && best.price <= target
   const change = best && previous ? best.price - previous.price : 0
-  const offers = (entry?.offers ?? []).filter((o) => o.kind === 'price').slice(0, 6)
+  const allOffers = byShop(entry?.offers ?? [])
+  const [showAll, setShowAll] = useState(false)
+  const [confirmRemove, setConfirmRemove] = useState(false)
+  const offers = showAll ? allOffers : allOffers.slice(0, SHOPS_SHOWN)
   const errors = entry?.errors ?? []
   const toGo = best && target != null && !below ? best.price - target : null
 
@@ -116,6 +120,17 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
               </li>
             )
           })}
+          {allOffers.length > SHOPS_SHOWN && (
+            <li>
+              <button
+                onClick={() => setShowAll((v) => !v)}
+                className="mt-1 text-xs text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+                aria-expanded={showAll}
+              >
+                {showAll ? 'Show fewer' : `Show all ${allOffers.length} shops`}
+              </button>
+            </li>
+          )}
         </ul>
       )}
 
@@ -127,9 +142,49 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
             {errors.length} couldn't be checked
           </span>
         )}
+        {confirmRemove ? (
+          <span className="flex items-center gap-2">
+            Stop tracking?
+            <a
+              href={untrackUrl(item)}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setConfirmRemove(false)}
+              className="font-medium text-destructive hover:underline"
+            >
+              Yes, on GitHub
+            </a>
+            <button onClick={() => setConfirmRemove(false)} className="hover:text-foreground">
+              No
+            </button>
+          </span>
+        ) : (
+          <button
+            onClick={() => setConfirmRemove(true)}
+            className="flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-white/5 hover:text-destructive"
+            aria-label={`Remove ${item.name}`}
+          >
+            <Trash2 className="size-3.5" aria-hidden="true" /> Remove
+          </button>
+        )}
       </div>
     </SpotlightCard>
   )
+}
+
+const SHOPS_SHOWN = 6
+
+/** One row per shop at its lowest price. A shop listed by both PriceSpy and PriceRunner (or a
+ *  comparison site and its own page) appears once. Cheapest first. */
+function byShop(offers: Offer[]): Offer[] {
+  const best = new Map<string, Offer>()
+  for (const o of offers) {
+    if (o.kind !== 'price') continue
+    const key = shop(o.source, o.seller).toLowerCase().replace(/[^a-z0-9]/g, '')
+    const current = best.get(key)
+    if (!current || o.price < current.price) best.set(key, o)
+  }
+  return [...best.values()].sort((a, b) => a.price - b.price)
 }
 
 const TRUST_COPY = {

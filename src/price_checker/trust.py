@@ -24,8 +24,15 @@ UNVERIFIED = "unverified"
 BLOCKED = "blocked"
 
 
-def _key(name: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", name.lower())
+def _words(name: str) -> str:
+    return " ".join(re.findall(r"[a-z0-9]+", name.lower().replace("'", "")))
+
+
+def _matches(listed: str, shop: str) -> bool:
+    """"John Lewis" matches "John Lewis & Partners" and "KRCS" matches "KRCS Apple Premium
+    Reseller", but "AO" doesn't match "Aosom": the listed name must end at a word break."""
+    listed, shop = _words(listed), _words(shop)
+    return bool(listed) and (shop == listed or shop.startswith(listed + " "))
 
 
 @dataclass
@@ -47,10 +54,10 @@ class ShopTrust:
 
     def level(self, offer: Offer) -> str:
         # The shop is the seller when a comparison site names one, otherwise the site itself.
-        shop = _key(offer.seller if offer.seller and not offer.seller.startswith("cheapest of") else offer.source)
-        if any(_key(b) == shop for b in self.blocked):
+        shop = offer.seller if offer.seller and not offer.seller.startswith("cheapest of") else offer.source
+        if any(_matches(b, shop) for b in self.blocked):
             return BLOCKED
-        if any(_key(t) == shop for t in self.trusted):
+        if any(_matches(t, shop) for t in self.trusted):
             return TRUSTED
         return UNVERIFIED
 

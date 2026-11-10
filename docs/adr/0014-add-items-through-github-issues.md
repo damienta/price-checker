@@ -1,4 +1,4 @@
-# 0014. Add items from the website through GitHub issues
+# 0014. Add and remove items from the website through GitHub issues
 
 - **Status:** Accepted
 - **Date:** 2026-11-10
@@ -20,12 +20,15 @@ meant opening Claude Code. A form on the site is quicker, but needs somewhere to
 
 - "Add item" on the site opens `issues/new?template=track.yml` with the product, links, target
   and notes filled in (`.github/ISSUE_TEMPLATE/track.yml`).
-- `.github/workflows/track.yml` runs on issues labelled `track` **opened by the repo owner only**,
+- `.github/workflows/items.yml` runs on issues labelled `track` or `untrack` **opened by the repo owner only**,
   since the repo is public and anyone can open an issue. The issue body reaches the script as an
   environment variable, never pasted into a shell command.
 - `price-checker add-from-issue` probes each link, keeps the readable ones, adds the item with
   default accessory excludes, checks its price, commits, replies with what it found and closes
   the issue.
+- **Remove** on a card asks to confirm, then opens `issues/new?template=untrack.yml` with the item's id.
+  `price-checker remove-from-issue` takes it off the watchlist and out of `latest.json`; its history
+  stays in `history.csv` so the chart returns if it's added again.
 - An item added by name only is picked up by the 7:15 Claude routine, which finds and adds
   PriceSpy, PriceRunner and shop links.
 

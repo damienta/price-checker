@@ -1,4 +1,5 @@
-"""Add an item from a GitHub issue (the website's "Add item" form opens one).
+"""Add or remove items from GitHub issues (the website's "Add item" and "Remove" buttons open
+one). Adding uses .github/ISSUE_TEMPLATE/track.yml, removing uses untrack.yml.
 
 The issue form (.github/ISSUE_TEMPLATE/track.yml) renders its answers as markdown:
 
@@ -42,13 +43,19 @@ class IssueRequest:
     notes: str = ""
 
 
-def parse_issue(body: str) -> IssueRequest:
+def _sections(body: str) -> dict[str, str]:
+    """{"product": "Apple AirPods Pro 3", ...} from the form's "### Heading" blocks."""
     sections: dict[str, str] = {}
     matches = list(_HEADING.finditer(body))
     for i, match in enumerate(matches):
         end = matches[i + 1].start() if i + 1 < len(matches) else len(body)
         value = body[match.end():end].strip()
         sections[match.group(1).lower()] = "" if value == NO_RESPONSE else value
+    return sections
+
+
+def parse_issue(body: str) -> IssueRequest:
+    sections = _sections(body)
 
     def find(prefix: str) -> str:
         return next((v for k, v in sections.items() if k.startswith(prefix)), "")
@@ -104,3 +111,15 @@ def add_from_issue(body: str, fetcher: Fetcher | None = None) -> tuple[Item | No
             "PriceSpy, PriceRunner and shop pages it can check.",
         ]
     return item, "\n".join(reply)
+
+
+def remove_from_issue(body: str) -> tuple[Item | None, str]:
+    """Remove the item named in an untrack issue ("### Item" holds its id or name)."""
+    ref = (_sections(body).get("item") or "").splitlines()[0:1]
+    if not ref or not ref[0].strip():
+        return None, "I couldn't find which item to remove in this issue."
+    item = store.remove_item(ref[0].strip())
+    if item is None:
+        ids = ", ".join(f"`{i.id}`" for i in store.load_watchlist()) or "nothing"
+        return None, f"Nothing on the watchlist matches `{ref[0].strip()}`. Tracked now: {ids}."
+    return item, f"Removed **{item.name}** (`{item.id}`). Its price history is kept in `data/history.csv`."

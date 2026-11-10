@@ -23,6 +23,22 @@ def test_pricespy_lists_each_shop_not_just_the_lowest():
     assert offers[1].where() == "Gadcet (via PriceSpy)"
 
 
+def test_pricerunner_lists_every_shop_from_its_filter_menu():
+    page = (Path(__file__).parent / "fixtures" / "pricerunner_offers.html").read_text(encoding="utf-8")
+    url = "https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices"
+    offers = extract_offers(page, url, "airpods")
+    assert [(o.seller, o.price) for o in offers] == [
+        ("A1 Tech Deals", 198.99),
+        ("Amazon", 200.0),
+        ("Ao", 200.0),
+        ("Apple", 219.0),
+    ]
+    assert all(o.source == "PriceRunner" and o.condition == "new" for o in offers)
+    # Without the shop menu, fall back to the single structured-data offer.
+    [only] = extract_offers(page.split("<body>")[0], url)
+    assert (only.seller, only.price) == ("OnBuy", 174.99)
+
+
 def test_pricespy_falls_back_to_structured_data():
     page = (
         '<script type="application/ld+json">{"@type":"Product","name":"X","offers":'
@@ -40,10 +56,13 @@ def test_trust_levels_and_best_price():
             Offer("a", "PriceSpy", 174.99, "u", seller="OnBuy"),
             Offer("a", "PriceSpy", 194.99, "u", seller="Gadcet"),
             Offer("a", "Apple", 219.0, "u"),
-            Offer("a", "PriceRunner", 210.0, "u", seller="john-lewis"),
+            Offer("a", "PriceRunner", 210.0, "u", seller="John Lewis & Partners"),
         ]
     )
     assert [o.trust for o in offers] == ["blocked", "unverified", "trusted", "trusted"]
+    # A listed name only matches at a word break.
+    assert ShopTrust(trusted=["AO"]).level(Offer("a", "PriceRunner", 1, "u", seller="Aosom")) == "unverified"
+    assert ShopTrust(trusted=["AO"]).level(Offer("a", "PriceRunner", 1, "u", seller="Ao")) == "trusted"
     item = Item(id="a", name="A")
     assert best_offer(item, offers).seller == "Gadcet"
 
