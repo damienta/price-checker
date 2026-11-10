@@ -50,6 +50,10 @@ class Fetcher:
             raise FetchError(f"blocked by site (HTTP {response.status_code})")
         if response.status_code >= 400:
             raise FetchError(f"HTTP {response.status_code}")
+        # Some CDNs answer data-centre IPs (like GitHub's) with an empty 202 bot check instead of
+        # the page. We don't try to get past it; we just say what happened.
+        if response.status_code == 202 and not response.text.strip():
+            raise FetchError("bot check from this server (HTTP 202), works from a home connection")
         return response.text
 
     def allowed(self, url: str) -> bool:
