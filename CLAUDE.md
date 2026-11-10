@@ -16,6 +16,17 @@ uv run price-checker feed              # rebuild the For you feed (data/feed.jso
 cd web && npm run dev                  # website, reading the local data/ folder
 ```
 
+`data/shops.json` decides which shops count: `blocked` ones (OnBuy and other marketplaces) are
+shown but never the best price, `trusted` ones are known UK retailers, anything else is labelled
+unverified. When the user says they do or don't trust a shop, edit that file.
+
+Items can also be added and removed from the website: it opens a GitHub issue
+(`.github/ISSUE_TEMPLATE/track.yml` or `untrack.yml`) and `.github/workflows/items.yml` runs
+`price-checker add-from-issue` or `remove-from-issue`.
+
+PriceSpy and PriceRunner product pages are read shop by shop (`sources/pricespy.py`,
+`sources/pricerunner.py`). Prefer adding a PriceRunner `/pl/` link: it lists every shop.
+
 The website (`web/`, React + Vite + Tailwind) reads `data/*.json` at runtime. If you change a
 data file's shape, update `web/src/lib/types.ts` to match. The user's interests for the For you
 feed are in `data/interests.json`; edit it when they say what they do or don't want to see.
@@ -28,7 +39,7 @@ The user will name products or paste links in chat. For each one:
    genuinely ambiguous (e.g. "AirPods" could be four products).
 2. **Find pages the script can check every day.** Web search for, in this order:
    - its **PriceSpy UK** page (`pricespy.co.uk/product.php?p=...`): lowest price across many shops
-   - its **PriceRunner UK** page (`pricerunner.com/pl/...`): cheapest shop and its name
+   - its **PriceRunner UK** page (`pricerunner.com/pl/...`): every shop selling it, new and in stock
    - 1 to 3 big UK retailer pages that stock it (Currys, John Lewis, AO, Very, Richer Sounds, ...)
    Run `uv run price-checker probe URL` on each. Only add URLs that print a price. Amazon and
    Argos block scripts: don't add them as URLs (the Claude routine checks those instead).

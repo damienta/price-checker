@@ -17,6 +17,8 @@ users, a database) can be made knowing what each choice was trading off.
 | [0010](0010-how-prices-are-verified.md) | How prices are verified before you're alerted | Accepted |
 | [0011](0011-static-site-reading-data-from-github.md) | A static website that reads data straight from GitHub | Accepted |
 | [0012](0012-for-you-feed-from-hotukdeals.md) | A "For you" feed built from HotUKDeals RSS | Accepted |
+| [0013](0013-shop-trust-levels.md) | Name the real shop, and decide which shops to believe | Accepted |
+| [0014](0014-add-items-through-github-issues.md) | Add and remove items from the website through GitHub issues | Accepted |
 
 ## Adding one
 

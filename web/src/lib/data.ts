@@ -85,14 +85,17 @@ function parseHistory(text: string): HistoryRow[] {
   const [header, ...rows] = parseCsv(text)
   if (!header) return []
   const col = (name: string) => header.indexOf(name)
+  const value = (r: string[], name: string) => (col(name) >= 0 ? (r[col(name)] ?? '') : '')
   return rows.map((r) => ({
-    checked_at: r[col('checked_at')],
-    item_id: r[col('item_id')],
-    source: r[col('source')],
-    price: Number(r[col('price')]),
-    condition: r[col('condition')],
-    in_stock: r[col('in_stock')],
-    kind: r[col('kind')],
+    checked_at: value(r, 'checked_at'),
+    item_id: value(r, 'item_id'),
+    source: value(r, 'source'),
+    seller: value(r, 'seller'),
+    price: Number(value(r, 'price')),
+    condition: value(r, 'condition'),
+    in_stock: value(r, 'in_stock'),
+    kind: value(r, 'kind'),
+    trust: value(r, 'trust'),
   }))
 }
 
@@ -101,6 +104,8 @@ export function priceSeries(history: HistoryRow[], itemId: string): { at: string
   const best = new Map<string, number>()
   for (const row of history) {
     if (row.item_id !== itemId || row.in_stock === 'false' || row.condition !== 'new') continue
+    // Blocked shops never count. Older "lowest of N shops" rows hid which shop it was, so skip them.
+    if (row.trust === 'blocked' || row.seller.startsWith('cheapest of')) continue
     if (!Number.isFinite(row.price)) continue
     const current = best.get(row.checked_at)
     if (current === undefined || row.price < current) best.set(row.checked_at, row.price)

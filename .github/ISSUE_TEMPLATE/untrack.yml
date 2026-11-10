@@ -1,0 +1,13 @@
+name: Stop tracking an item
+description: Remove something from the price watchlist
+title: "Untrack: "
+labels: ["untrack"]
+body:
+  - type: input
+    id: item
+    attributes:
+      label: Item
+      description: The item's id (shown on the website and in data/watchlist.json) or its exact name.
+      placeholder: airpods-pro-3
+    validations:
+      required: true

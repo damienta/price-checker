@@ -16,6 +16,9 @@ from urllib.parse import urlsplit
 from price_checker.http import Fetcher, FetchError
 from price_checker.matching import parse_price
 from price_checker.models import CheckError, Item, Offer
+from price_checker.sources import pricerunner, pricespy
+from price_checker.sources.pricerunner import is_pricerunner
+from price_checker.sources.pricespy import is_pricespy
 
 _JSONLD = re.compile(
     r"<script[^>]+type=[\"']application/ld\+json[\"'][^>]*>(.*?)</script>",
@@ -90,6 +93,10 @@ class PageSource:
 
 def extract_offers(page: str, url: str, item_id: str = "") -> list[Offer]:
     """Every GBP price the page publishes for its main product."""
+    if is_pricespy(url) and (shops := pricespy.shop_offers(page, url, item_id)):
+        return shops
+    if is_pricerunner(url) and (shops := pricerunner.shop_offers(page, url, item_id)):
+        return shops
     site = site_name(url)
     products = list(_products(_jsonld_blocks(page)))
     chosen = [p for p in products if _same_url(p.get("url"), url)] or products

@@ -1,0 +1,30 @@
+name: Track an item
+description: Add something to the price watchlist
+title: "Track: "
+labels: ["track"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Product
+      description: Exact name, with the model number if it has one.
+      placeholder: Apple AirPods Pro 3
+    validations:
+      required: true
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: Optional. PriceSpy, PriceRunner or shop pages, one per line.
+      placeholder: https://pricespy.co.uk/product.php?p=...
+  - type: input
+    id: target
+    attributes:
+      label: Target price (£)
+      description: Alert when it's at or below this.
+      placeholder: "160"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Colour, size, anything that matters.

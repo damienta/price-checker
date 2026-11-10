@@ -13,6 +13,8 @@ export type Offer = {
   currency: string
   kind: 'price' | 'deal'
   posted_at: string
+  /** From data/shops.json. Older data has no value. */
+  trust?: 'trusted' | 'unverified' | 'blocked'
 }
 
 export type CheckError = { item_id: string; source: string; reason: string; url: string }
@@ -42,7 +44,17 @@ export type LatestEntry = {
 
 export type Latest = { checked_at: string | null; items: Record<string, LatestEntry> }
 
-export type HistoryRow = { checked_at: string; item_id: string; source: string; price: number; condition: string; in_stock: string; kind: string }
+export type HistoryRow = {
+  checked_at: string
+  item_id: string
+  source: string
+  seller: string
+  price: number
+  condition: string
+  in_stock: string
+  kind: string
+  trust: string
+}
 
 export type FeedDeal = {
   id: string

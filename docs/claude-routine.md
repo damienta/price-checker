@@ -28,7 +28,8 @@ first. Prices are GBP, UK sellers only, new condition unless the item says "cond
 
 2. For each item, search the web for its current lowest UK price. Look at: Amazon UK, Argos,
    Currys, John Lewis, AO, Very, the brand's own UK store, PriceSpy UK, PriceRunner UK, and any
-   other well-known UK retailer that shows up. Ignore marketplace sellers with no reviews,
+   other well-known UK retailer that shows up. Never report a shop listed under "blocked" in
+   data/shops.json. Ignore marketplace sellers with no reviews,
    bundles, refurbished/used (unless the item allows them), and anything that isn't exactly
    the same product (check model numbers, sizes, storage, colour if the item names one).
 
