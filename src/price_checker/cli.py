@@ -78,12 +78,18 @@ def cmd_check(args: argparse.Namespace) -> int:
             return 1
     sources = build_sources(Fetcher(), items, store.data_dir())
     print(f"Sources: {describe(sources)}")
+    trust = ShopTrust.load(store.data_dir() / "shops.json")
     run = run_check(
         items,
         sources,
         on_item=lambda i: print(f"Checking {i.name}...", flush=True),
-        trust=ShopTrust.load(store.data_dir() / "shops.json"),
+        trust=trust,
     )
+    if not args.dry_run:
+        # A shop blocked since earlier checks shouldn't linger in the chart or the 30-day low.
+        dropped = store.drop_history_rows(lambda r: trust.is_blocked(r.get("seller") or r.get("source", "")))
+        if dropped:
+            print(f"Removed {dropped} history rows from blocked shops")
     if not args.dry_run:
         store.append_history(run)
         latest = store.save_latest(items, run)

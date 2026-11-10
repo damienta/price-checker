@@ -18,9 +18,49 @@ def test_pricespy_lists_each_shop_not_just_the_lowest():
         ("Gadcet", 194.99),
         ("A1 Tech Deals", 198.99),
     ]
-    assert all(o.source == "PriceSpy" and o.url == URL and o.in_stock for o in offers)
+    assert all(o.source == "PriceSpy" and o.in_stock for o in offers)
+    # Each price links to that shop through PriceSpy's redirect, not to the comparison page.
+    assert offers[1].url == "https://pricespy.co.uk/go-to-shop/40430/offer/55996075868538?client_id=1551"
     assert offers[1].title.startswith("Apple AirPods Pro 3 Wireless Earbuds")
     assert offers[1].where() == "Gadcet (via PriceSpy)"
+
+
+def test_pricerunner_reads_each_listing_with_its_shop_link_and_delivery():
+    page = (Path(__file__).parent / "fixtures" / "pricerunner_listings.html").read_text(encoding="utf-8")
+    url = "https://www.pricerunner.com/pl/94-3216399795/Headphones/Apple-AirPods-Pro-3-White-Compare-Prices"
+    offers = extract_offers(page, url, "airpods")
+    assert [(o.seller, o.price) for o in offers] == [
+        ("OnBuy", 174.99),
+        ("Amazon", 200.0),
+        ("Laptops Direct", 203.99),  # £199.00 + £4.99 delivery
+        ("Comet", 174.99),
+        ("Gadcet", 194.99),
+    ]
+    assert all(o.url.startswith("https://clk.klarna.com/uk/gotostore/") for o in offers)
+    assert offers[1].title.startswith("Apple AirPods Pro 3")
+
+
+def test_blocked_shops_are_dropped_from_the_check():
+    from price_checker.checker import run_check
+
+    class Fake:
+        name = "fake"
+
+        def check(self, item):
+            return [Offer(item.id, "PriceRunner", 174.99, "u", seller="OnBuy"), Offer(item.id, "PriceRunner", 200, "u", seller="Amazon")], []
+
+    run = run_check([Item(id="a", name="A")], [Fake()], trust=ShopTrust(trusted=["Amazon"], blocked=["OnBuy"]))
+    assert [(o.seller, o.trust) for o in run.offers] == [("Amazon", "trusted")]
+
+
+def test_history_rows_for_blocked_shops_can_be_dropped(tmp_path):
+    store.append_history(
+        CheckRun("t1", [Offer("a", "PriceRunner", 174.99, "u", seller="Comet"), Offer("a", "Apple", 219, "u")]),
+        tmp_path,
+    )
+    trust = ShopTrust(blocked=["Comet"])
+    assert store.drop_history_rows(lambda r: trust.is_blocked(r["seller"] or r["source"]), tmp_path) == 1
+    assert [r["source"] for r in store.load_history(tmp_path)] == ["Apple"]
 
 
 def test_pricerunner_lists_every_shop_from_its_filter_menu():

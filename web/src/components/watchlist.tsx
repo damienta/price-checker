@@ -97,24 +97,21 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
       {offers.length > 0 && (
         <ul className="space-y-1.5 border-t border-border pt-4 text-sm">
           {offers.map((o) => {
-            const blocked = o.trust === 'blocked'
             const isBest = best != null && o.price === best.price && o.seller === best.seller && o.source === best.source
             return (
-              <li
-                key={`${o.source}-${o.seller}-${o.price}`}
-                className={`flex items-center justify-between gap-3 ${blocked ? 'opacity-50' : ''}`}
-              >
+              <li key={`${o.source}-${o.seller}-${o.price}`} className="flex items-center justify-between gap-3">
                 <span className="flex min-w-0 items-center gap-2">
                   <AnimatedLink
                     href={o.url}
                     external
-                    className={`truncate text-muted-foreground hover:text-foreground ${blocked ? 'line-through' : ''}`}
+                    className="truncate text-muted-foreground hover:text-foreground"
+                    ariaLabel={`${shop(o.source, o.seller)}: ${o.title || 'open listing'}`}
                   >
                     {shop(o.source, o.seller)}
                   </AnimatedLink>
                   <TrustBadge trust={o.trust} compact />
                 </span>
-                <span className={`price shrink-0 ${isBest ? 'text-foreground' : 'text-muted-foreground'} ${blocked ? 'line-through' : ''}`}>
+                <span className={`price shrink-0 ${isBest ? 'text-foreground' : 'text-muted-foreground'}`}>
                   {money(o.price)}
                 </span>
               </li>
@@ -179,7 +176,8 @@ const SHOPS_SHOWN = 6
 function byShop(offers: Offer[]): Offer[] {
   const best = new Map<string, Offer>()
   for (const o of offers) {
-    if (o.kind !== 'price') continue
+    // Blocked shops aren't saved any more; this hides any left in older data.
+    if (o.kind !== 'price' || o.trust === 'blocked') continue
     const key = shop(o.source, o.seller).toLowerCase().replace(/[^a-z0-9]/g, '')
     const current = best.get(key)
     if (!current || o.price < current.price) best.set(key, o)
@@ -187,20 +185,14 @@ function byShop(offers: Offer[]): Offer[] {
   return [...best.values()].sort((a, b) => a.price - b.price)
 }
 
-const TRUST_COPY = {
-  blocked: { label: 'Blocked', title: 'On your blocked list in data/shops.json. Never counted as the best price.', cls: 'bg-destructive/10 text-destructive' },
-  unverified: { label: 'Unverified', title: "Not on your trusted list. Check the seller's reviews before buying.", cls: 'bg-hot/10 text-hot' },
-} as const
-
 function TrustBadge({ trust, compact = false }: { trust?: string; compact?: boolean }) {
-  if (trust !== 'blocked' && trust !== 'unverified') return null
-  const copy = TRUST_COPY[trust]
+  if (trust !== 'unverified') return null
   return (
     <span
-      title={copy.title}
-      className={`shrink-0 rounded-full font-medium ${copy.cls} ${compact ? 'px-1.5 text-[10px]' : 'px-2 py-0.5 text-[11px]'}`}
+      title="Not on your trusted list in data/shops.json. Check the seller's reviews before buying."
+      className={`shrink-0 rounded-full bg-hot/10 font-medium text-hot ${compact ? 'px-1.5 text-[10px]' : 'px-2 py-0.5 text-[11px]'}`}
     >
-      {copy.label}
+      Unverified
     </span>
   )
 }

@@ -52,6 +52,9 @@ class ShopTrust:
             only_trusted=bool(data.get("only_trusted", False)),
         )
 
+    def is_blocked(self, shop: str) -> bool:
+        return any(_matches(b, shop) for b in self.blocked)
+
     def level(self, offer: Offer) -> str:
         # The shop is the seller when a comparison site names one, otherwise the site itself.
         shop = offer.seller if offer.seller and not offer.seller.startswith("cheapest of") else offer.source

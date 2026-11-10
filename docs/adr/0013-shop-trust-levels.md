@@ -17,13 +17,23 @@ is often unknown. A headline price you wouldn't buy from is worse than no headli
    structured-data lowest price.
 
    `sources/pricerunner.py` does the same for PriceRunner, which gives more: its product page
-   embeds the data behind its "filter by shop" menu (`af_MERCHANT`), listing **every** shop with
-   its lowest price (27 for AirPods Pro 3). That menu follows the page's default filters, new or
-   unspecified condition and in stock, so used and refurbished offers aren't mixed in.
+   embeds the app's own data, a `merchants` map and an `offers` list with **every individual
+   listing** (33 for AirPods Pro 3): shop, title, price, delivery cost, stock and a link that
+   goes straight to that shop. The list follows the page's default filters (new or unspecified
+   condition, in stock). Delivery is added to the price. If that data moves, it falls back to the
+   "filter by shop" menu (`af_MERCHANT`), then to structured data.
+
+   Every price links to the seller: PriceSpy's `go-to-shop` and PriceRunner's `gotostore`
+   redirects take a click to that shop's listing, not to the comparison page. (Those redirect
+   paths are off-limits to bots in robots.txt; the script never fetches them, it only stores the
+   link for you to click.)
 2. **Sort shops into three groups** in `data/shops.json`:
    - **trusted**: well-known UK retailers
-   - **blocked** (OnBuy, Fruugo, Wish, Temu, AliExpress, ...): still recorded and shown, struck
-     through, but never the best price. The digest says when one was cheaper and got ignored.
+   - **blocked** (OnBuy, Comet, Fruugo, Wish, Temu, AliExpress, ...): dropped as soon as a check
+     finds them. Not saved, not in the digest, not on the site. Each check also removes their
+     rows from `history.csv`, so a shop blocked later disappears from the chart and the 30-day
+     low too. Comet is on the list because OnBuy bought the brand in 2025 and its listings are
+     the same marketplace listings (identical titles and prices).
    - **unverified**: everything else. Counts, but is labelled in the digest and on the site.
    - `"only_trusted": true` treats unverified shops as blocked.
    - A listed name matches a shop name that starts with it at a word break: "John Lewis" matches
@@ -34,8 +44,7 @@ is often unknown. A headline price you wouldn't buy from is worse than no headli
 ## Consequences
 
 - AirPods Pro 3: the headline used to be £174.99 with no shop named (it was OnBuy). Now it's
-  £174.99 at Comet (unverified), with OnBuy shown and struck through, and Laptops Direct at
-  £199 as the cheapest trusted shop.
+  £194.99 at Gadcet (unverified), with Amazon and AO at £200 as the cheapest trusted shops.
 - Only PriceSpy's first five shops are visible to the script; PriceRunner covers the rest.
 - Both readers depend on page markup that isn't a public API. Tests use trimmed copies of the
   real pages, and each falls back to the structured-data price, so a redesign degrades the
