@@ -25,7 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      # Always start from the newest main, even on "Re-run": a re-run otherwise checks out the
+      # commit the run first started on, which is behind the data the first attempt saved.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: astral-sh/setup-uv@v6
 
@@ -73,14 +77,28 @@ jobs:
         run: |
           git config user.name "price-checker[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
-          if git diff --cached --quiet; then
+          if git diff --quiet -- data/ && [ -z "$(git ls-files --others -- data/)" ]; then
             echo "No data changes."
             exit 0
           fi
-          git commit -m "data: price check $(TZ=Europe/London date +%Y-%m-%d)"
+          # Another run may have saved since this one started. Rather than a git merge (which
+          # conflicts on these files), rebuild on top of the newest main: this run's rows are
+          # appended to history.csv and its other data files replace main's.
+          keep="$RUNNER_TEMP/keep"
+          mkdir -p "$keep"
+          old_rows=$(git show HEAD:data/history.csv 2>/dev/null | wc -l)
+          tail -n +"$((old_rows + 1))" data/history.csv > "$keep/new_rows.csv"
+          changed=$( (git diff --name-only -- data/; git ls-files --others -- data/) | grep -v '^data/history.csv$' || true)
+          for f in $changed; do mkdir -p "$keep/$(dirname "$f")"; cp "$f" "$keep/$f"; done
           for attempt in 1 2 3; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            for f in $changed; do mkdir -p "$(dirname "$f")"; cp "$keep/$f" "$f"; done
+            cat "$keep/new_rows.csv" >> data/history.csv
+            git add data/
+            if git diff --cached --quiet; then echo "Nothing new to save."; exit 0; fi
+            git commit -qm "data: price check $(TZ=Europe/London date +%Y-%m-%d)"
+            git push origin HEAD:main && exit 0
             sleep 5
           done
           exit 1
