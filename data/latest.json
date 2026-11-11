@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-11T15:37:04+00:00",
+  "checked_at": "2026-11-11T16:34:00+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-11T15:37:04+00:00",
+      "checked_at": "2026-11-11T16:34:00+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
@@ -33,7 +33,7 @@
         "posted_at": "",
         "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-11T14:43:20+00:00",
+      "previous_checked_at": "2026-11-11T15:37:04+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
