@@ -40,3 +40,9 @@ def test_robots_server_error_stays_away():
     fetcher, _ = fetcher_for({"https://shop.test/robots.txt": (503, "")})
     with pytest.raises(FetchError, match="robots.txt"):
         fetcher.get_text("https://shop.test/p/1")
+
+
+def test_empty_202_bot_check_is_named():
+    fetcher, _ = fetcher_for({"https://shop.test/p/1": (202, "")})
+    with pytest.raises(FetchError, match="bot check"):
+        fetcher.get_text("https://shop.test/p/1")

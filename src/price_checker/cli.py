@@ -137,7 +137,11 @@ def cmd_probe(args: argparse.Namespace) -> int:
 def _webhook() -> str | None:
     url = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
     if not url:
-        print("DISCORD_WEBHOOK_URL is not set", file=sys.stderr)
+        # A warning, not a failure: the check itself worked, there's just nowhere to send it.
+        # In GitHub Actions the ::warning:: prefix shows it on the run's summary page.
+        prefix = "::warning::" if os.environ.get("GITHUB_ACTIONS") else ""
+        print(f"{prefix}DISCORD_WEBHOOK_URL is not set, so nothing was sent to Discord. "
+              "Add it under Settings > Secrets and variables > Actions.", file=sys.stderr)
     return url or None
 
 
@@ -155,11 +159,11 @@ def cmd_digest(args: argparse.Namespace) -> int:
     print(message)
     if args.post:
         webhook = _webhook()
-        if not webhook:
-            return 1
-        discord.post(webhook, message)
+        if webhook:
+            discord.post(webhook, message)
+            print("\nPosted to Discord.")
+        # Recorded either way, so the later scheduled runs today don't check and fail again.
         schedule.record_posted(base / "digest_state.json", now)
-        print("\nPosted to Discord.")
     return 0
 
 
@@ -212,9 +216,8 @@ def cmd_due(args: argparse.Namespace) -> int:
 
 def cmd_notify(args: argparse.Namespace) -> int:
     webhook = _webhook()
-    if not webhook:
-        return 1
-    discord.post(webhook, args.message)
+    if webhook:
+        discord.post(webhook, args.message)
     return 0
 
 

@@ -26,6 +26,9 @@ Items can also be added and removed from the website: it opens a GitHub issue
 
 PriceSpy and PriceRunner product pages are read shop by shop (`sources/pricespy.py`,
 `sources/pricerunner.py`). Prefer adding a PriceRunner `/pl/` link: it lists every shop.
+PriceRunner answers GitHub Actions (a data-centre IP) with an empty HTTP 202 bot check,
+so it only works from a home connection; the daily run relies on PriceSpy and shop pages.
+Don't try to get around the bot check.
 
 The website (`web/`, React + Vite + Tailwind) reads `data/*.json` at runtime. If you change a
 data file's shape, update `web/src/lib/types.ts` to match. The user's interests for the For you
