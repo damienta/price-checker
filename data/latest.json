@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-10T20:36:10+00:00",
+  "checked_at": "2026-11-11T14:43:20+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-10T20:36:10+00:00",
+      "checked_at": "2026-11-11T14:43:20+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
@@ -33,7 +33,7 @@
         "posted_at": "",
         "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-10T18:12:34+00:00",
+      "previous_checked_at": "2026-11-10T20:36:10+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
@@ -81,9 +81,9 @@
           "item_id": "airpods-pro-3",
           "source": "PriceSpy",
           "price": 199.99,
-          "url": "https://pricespy.co.uk/go-to-shop/29044/offer/v1%7C287706493252%7C0?client_id=1551",
+          "url": "https://pricespy.co.uk/go-to-shop/29044/offer/v1%7C397503119336%7C0?client_id=1551",
           "seller": "eBay",
-          "title": "Genuine Apple AirPods Pro 3 Wireless Earbuds Noise-Cancelling Warranty Oct 2027",
+          "title": "NEW Apple AirPods Pro 3 Bluetooth Headphones with MagSafe Charging Case - White",
           "in_stock": true,
           "condition": "new",
           "currency": "GBP",
