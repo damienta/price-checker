@@ -1,22 +1,22 @@
 {
-  "checked_at": "2026-11-11T21:38:46+00:00",
+  "checked_at": "2026-11-12T15:36:01+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-11T21:38:46+00:00",
+      "checked_at": "2026-11-12T15:36:01+00:00",
       "best": {
         "item_id": "airpods-pro-3",
-        "source": "PriceSpy",
-        "price": 194.99,
-        "url": "https://pricespy.co.uk/go-to-shop/40430/offer/55996075868538?client_id=1551",
-        "seller": "Gadcet",
-        "title": "Apple AirPods Pro 3 Wireless Earbuds – Noise Cancelling, Spatial Audio, Heart Rate & Hearing Features, USB-C - New",
-        "in_stock": true,
+        "source": "HotUKDeals",
+        "price": 179.0,
+        "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wcoupon-5030661",
+        "seller": "Joybuy",
+        "title": "Apple AirPods Pro 3 w/coupon",
+        "in_stock": null,
         "condition": "new",
         "currency": "GBP",
-        "kind": "price",
-        "posted_at": "",
+        "kind": "deal",
+        "posted_at": "2026-11-12T09:59:57+00:00",
         "trust": "unverified"
       },
       "previous_best": {
@@ -33,8 +33,22 @@
         "posted_at": "",
         "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-11T21:29:29+00:00",
+      "previous_checked_at": "2026-11-11T21:38:46+00:00",
       "offers": [
+        {
+          "item_id": "airpods-pro-3",
+          "source": "HotUKDeals",
+          "price": 179.0,
+          "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wcoupon-5030661",
+          "seller": "Joybuy",
+          "title": "Apple AirPods Pro 3 w/coupon",
+          "in_stock": null,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "deal",
+          "posted_at": "2026-11-12T09:59:57+00:00",
+          "trust": "unverified"
+        },
         {
           "item_id": "airpods-pro-3",
           "source": "PriceSpy",
@@ -42,20 +56,6 @@
           "url": "https://pricespy.co.uk/go-to-shop/40430/offer/55996075868538?client_id=1551",
           "seller": "Gadcet",
           "title": "Apple AirPods Pro 3 Wireless Earbuds – Noise Cancelling, Spatial Audio, Heart Rate & Hearing Features, USB-C - New",
-          "in_stock": true,
-          "condition": "new",
-          "currency": "GBP",
-          "kind": "price",
-          "posted_at": "",
-          "trust": "unverified"
-        },
-        {
-          "item_id": "airpods-pro-3",
-          "source": "PriceSpy",
-          "price": 198.99,
-          "url": "https://pricespy.co.uk/go-to-shop/42367/offer/A1T-AJHJUB3VBR?client_id=1551",
-          "seller": "A1 Tech Deals",
-          "title": "Apple AirPods Pro 3rd Gen USB-C Wireless Earbuds - White",
           "in_stock": true,
           "condition": "new",
           "currency": "GBP",
@@ -80,16 +80,30 @@
         {
           "item_id": "airpods-pro-3",
           "source": "PriceSpy",
-          "price": 199.99,
-          "url": "https://pricespy.co.uk/go-to-shop/29044/offer/v1%7C397503119336%7C0?client_id=1551",
-          "seller": "eBay",
-          "title": "NEW Apple AirPods Pro 3 Bluetooth Headphones with MagSafe Charging Case - White",
+          "price": 200.0,
+          "url": "https://pricespy.co.uk/go-to-shop/1751/offer/B0FQF32239?client_id=1551",
+          "seller": "Amazon.co.uk",
+          "title": "Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Hearing Aid Feature, Bluetooth Headphones, Spatial Audio, High‑Fidelity Sound, USB‑C Charging",
           "in_stock": true,
           "condition": "new",
           "currency": "GBP",
           "kind": "price",
           "posted_at": "",
-          "trust": "unverified"
+          "trust": "trusted"
+        },
+        {
+          "item_id": "airpods-pro-3",
+          "source": "PriceSpy",
+          "price": 200.0,
+          "url": "https://pricespy.co.uk/go-to-shop/15252/offer/108666?client_id=1551",
+          "seller": "ao.com",
+          "title": "Apple AirPods Pro 3 with Active Noise Cancelling & Wireless Charging Case - White",
+          "in_stock": true,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "price",
+          "posted_at": "",
+          "trust": "trusted"
         },
         {
           "item_id": "airpods-pro-3",
