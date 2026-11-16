@@ -229,3 +229,10 @@ checked_at,item_id,source,seller,price,currency,condition,in_stock,kind,url,titl
 2026-11-15T14:18:22+00:00,airpods-pro-3,Apple,,219.0,GBP,new,,price,https://www.apple.com/uk/shop/product/MFHP4ZM/A/airpods-pro-3,AirPods Pro 3,trusted
 2026-11-15T14:18:22+00:00,airpods-pro-3,KRCS,,219.0,GBP,new,,price,https://www.krcs.co.uk/airpods-pro-3,AirPods Pro 3,trusted
 2026-11-15T14:18:22+00:00,airpods-pro-3,HotUKDeals,Amazon,189.0,GBP,new,,deal,https://www.hotukdeals.com/deals/apple-airpods-pro-3-wireless-earbuds-5032024,Apple AirPods Pro 3 Wireless Earbuds,trusted
+2026-11-16T16:24:44+00:00,airpods-pro-3,PriceSpy,Joybuy,174.0,GBP,new,true,price,https://pricespy.co.uk/go-to-shop/42857/offer/10405108?client_id=1551,Apple - AirPods Pro 3,unverified
+2026-11-16T16:24:44+00:00,airpods-pro-3,PriceSpy,Gadcet,194.99,GBP,new,true,price,https://pricespy.co.uk/go-to-shop/40430/offer/55996075868538?client_id=1551,"Apple AirPods Pro 3 Wireless Earbuds – Noise Cancelling, Spatial Audio, Heart Rate & Hearing Features, USB-C - New",unverified
+2026-11-16T16:24:44+00:00,airpods-pro-3,PriceSpy,Amazon.co.uk,200.0,GBP,new,true,price,https://pricespy.co.uk/go-to-shop/1751/offer/B0FQF32239?client_id=1551,"Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Hearing Aid Feature, Bluetooth Headphones, Spatial Audio, High‑Fidelity Sound, USB‑C Charging",trusted
+2026-11-16T16:24:44+00:00,airpods-pro-3,PriceSpy,ao.com,200.0,GBP,new,true,price,https://pricespy.co.uk/go-to-shop/15252/offer/108666?client_id=1551,Apple AirPods Pro 3 with Active Noise Cancelling & Wireless Charging Case - White,trusted
+2026-11-16T16:24:44+00:00,airpods-pro-3,Apple,,219.0,GBP,new,,price,https://www.apple.com/uk/shop/product/MFHP4ZM/A/airpods-pro-3,AirPods Pro 3,trusted
+2026-11-16T16:24:44+00:00,airpods-pro-3,KRCS,,219.0,GBP,new,,price,https://www.krcs.co.uk/airpods-pro-3,AirPods Pro 3,trusted
+2026-11-16T16:24:44+00:00,airpods-pro-3,HotUKDeals,Joybuy,174.0,GBP,new,,deal,https://www.hotukdeals.com/deals/airpods-pro-3-5034270,Apple Airpods Pro 3,unverified
