@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-16T16:24:44+00:00",
+  "checked_at": "2026-11-17T16:28:37+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-16T16:24:44+00:00",
+      "checked_at": "2026-11-17T16:28:37+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
@@ -21,19 +21,19 @@
       },
       "previous_best": {
         "item_id": "airpods-pro-3",
-        "source": "HotUKDeals",
-        "price": 189.0,
-        "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wireless-earbuds-5032024",
-        "seller": "Amazon",
-        "title": "Apple AirPods Pro 3 Wireless Earbuds",
-        "in_stock": null,
+        "source": "PriceSpy",
+        "price": 174.0,
+        "url": "https://pricespy.co.uk/go-to-shop/42857/offer/10405108?client_id=1551",
+        "seller": "Joybuy",
+        "title": "Apple - AirPods Pro 3",
+        "in_stock": true,
         "condition": "new",
         "currency": "GBP",
-        "kind": "deal",
-        "posted_at": "2026-11-13T15:14:47+00:00",
-        "trust": "trusted"
+        "kind": "price",
+        "posted_at": "",
+        "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-15T14:18:22+00:00",
+      "previous_checked_at": "2026-11-16T16:24:44+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
@@ -48,6 +48,20 @@
           "kind": "price",
           "posted_at": "",
           "trust": "unverified"
+        },
+        {
+          "item_id": "airpods-pro-3",
+          "source": "HotUKDeals",
+          "price": 174.0,
+          "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wireless-earbuds-5035242",
+          "seller": "Amazon",
+          "title": "Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, USB‑C Charging",
+          "in_stock": null,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "deal",
+          "posted_at": "2026-11-16T18:35:27+00:00",
+          "trust": "trusted"
         },
         {
           "item_id": "airpods-pro-3",
