@@ -43,3 +43,12 @@ def test_acceptable_and_best():
     item.condition = "any"
     assert best_offer(item, offers).source == "B"
     assert not acceptable(item, Offer("x", "F", 95, "u", currency="EUR"))
+
+
+def test_condition_grade_at_end_of_title_means_used():
+    from price_checker.matching import condition_from_title
+
+    assert condition_from_title("APPLE AirPods 4 with Active Noise Cancellation - White - Acceptable") == "used"
+    assert condition_from_title("AirPods 4 (Very Good)") == "used"
+    assert condition_from_title("AirPods 4 - good battery life, great sound") == "new"
+    assert condition_from_title("Apple AirPods 4 with Active Noise Cancellation") == "new"

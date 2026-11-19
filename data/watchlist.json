@@ -31,6 +31,36 @@
       "search": true,
       "added": "2026-11-08",
       "notes": "White, USB-C MagSafe case (MFHP4ZM/A). RRP £219."
+    },
+    {
+      "id": "airpods-4-anc",
+      "name": "Apple AirPods 4 with Active Noise Cancellation",
+      "target_price": 100.0,
+      "condition": "new",
+      "keywords": [
+        "airpods 4"
+      ],
+      "exclude": [
+        "pro",
+        "case",
+        "cover",
+        "for",
+        "compatible",
+        "tips",
+        "replacement",
+        "strap"
+      ],
+      "min_price": 70.0,
+      "urls": [
+        "https://pricespy.co.uk/product.php?p=13854647",
+        "https://www.pricerunner.com/pl/94-3331931731/Headphones/Apple-AirPods-4-with-Active-Noise-Cancellation-Compare-Prices"
+      ],
+      "hotukdeals_tags": [
+        "apple-airpods"
+      ],
+      "search": true,
+      "added": "2026-11-19",
+      "notes": "White, USB-C wireless charging case (MXP93ZM/A). RRP £179."
     }
   ]
 }
