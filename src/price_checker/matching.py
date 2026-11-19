@@ -12,6 +12,12 @@ _NOT_NEW = re.compile(
     re.IGNORECASE,
 )
 _REFURB = re.compile(r"\b(refurb\w*|renewed|re-?conditioned)\b", re.IGNORECASE)
+# Resellers put a condition grade at the end of the title: "... - White - Acceptable",
+# "... (Very Good)". Only at the end, so "Good battery life" in a description doesn't count.
+_GRADE = re.compile(
+    r"[-–(|]\s*(acceptable|fair|good|very good|excellent|pristine|like new)\s*\)?\s*$",
+    re.IGNORECASE,
+)
 _PRICE = re.compile(r"(\d[\d,]*(?:\.\d+)?)")
 
 
@@ -60,7 +66,7 @@ def title_matches(item: Item, title: str) -> bool:
 def condition_from_title(title: str) -> str:
     if _REFURB.search(title):
         return "refurbished"
-    if _NOT_NEW.search(title):
+    if _NOT_NEW.search(title) or _GRADE.search(title):
         return "used"
     return "new"
 
