@@ -45,7 +45,7 @@ function ItemCard({ item, entry, history }: { item: WatchItem; entry?: LatestEnt
   const target = item.target_price
   const below = best != null && target != null && best.price <= target
   const change = best && previous ? best.price - previous.price : 0
-  const allOffers = byShop(entry?.offers ?? [])
+  const allOffers = byShop(entry?.offers ?? [], item.condition)
   const [showAll, setShowAll] = useState(false)
   const [confirmRemove, setConfirmRemove] = useState(false)
   const offers = showAll ? allOffers : allOffers.slice(0, SHOPS_SHOWN)
@@ -173,11 +173,13 @@ const SHOPS_SHOWN = 6
 
 /** One row per shop at its lowest price. A shop listed by both PriceSpy and PriceRunner (or a
  *  comparison site and its own page) appears once. Cheapest first. */
-function byShop(offers: Offer[]): Offer[] {
+function byShop(offers: Offer[], condition: string): Offer[] {
   const best = new Map<string, Offer>()
   for (const o of offers) {
     // Blocked shops aren't saved any more; this hides any left in older data.
     if (o.kind !== 'price' || o.trust === 'blocked') continue
+    // Used and refurbished listings don't count for an item you want new, so don't list them.
+    if (condition === 'new' && !['new', 'unknown'].includes(o.condition)) continue
     const key = shop(o.source, o.seller).toLowerCase().replace(/[^a-z0-9]/g, '')
     const current = best.get(key)
     if (!current || o.price < current.price) best.set(key, o)
