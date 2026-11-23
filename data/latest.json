@@ -1,23 +1,23 @@
 {
-  "checked_at": "2026-11-22T14:53:23+00:00",
+  "checked_at": "2026-11-23T18:44:23+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-22T14:53:23+00:00",
+      "checked_at": "2026-11-23T18:44:23+00:00",
       "best": {
         "item_id": "airpods-pro-3",
-        "source": "HotUKDeals",
-        "price": 164.0,
-        "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wcode-select-accounts-5041063",
-        "seller": "EE Tech &amp; Gaming",
-        "title": "Apple AirPods Pro 3 - w/Code (select accounts)",
-        "in_stock": null,
+        "source": "PriceSpy",
+        "price": 165.0,
+        "url": "https://pricespy.co.uk/go-to-shop/1751/offer/B0FQF32239?client_id=1551",
+        "seller": "Amazon.co.uk",
+        "title": "Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Hearing Aid Feature, Bluetooth Headphones, Spatial Audio, High‑Fidelity Sound, USB‑C Charging",
+        "in_stock": true,
         "condition": "new",
         "currency": "GBP",
-        "kind": "deal",
-        "posted_at": "2026-11-20T19:29:05+00:00",
-        "trust": "unverified"
+        "kind": "price",
+        "posted_at": "",
+        "trust": "trusted"
       },
       "previous_best": {
         "item_id": "airpods-pro-3",
@@ -33,22 +33,8 @@
         "posted_at": "2026-11-20T19:29:05+00:00",
         "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-21T14:56:06+00:00",
+      "previous_checked_at": "2026-11-22T14:53:23+00:00",
       "offers": [
-        {
-          "item_id": "airpods-pro-3",
-          "source": "HotUKDeals",
-          "price": 164.0,
-          "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wcode-select-accounts-5041063",
-          "seller": "EE Tech &amp; Gaming",
-          "title": "Apple AirPods Pro 3 - w/Code (select accounts)",
-          "in_stock": null,
-          "condition": "new",
-          "currency": "GBP",
-          "kind": "deal",
-          "posted_at": "2026-11-20T19:29:05+00:00",
-          "trust": "unverified"
-        },
         {
           "item_id": "airpods-pro-3",
           "source": "PriceSpy",
