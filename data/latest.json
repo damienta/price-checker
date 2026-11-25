@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-11-24T18:18:27+00:00",
+  "checked_at": "2026-11-25T17:36:56+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-24T18:18:27+00:00",
+      "checked_at": "2026-11-25T17:36:56+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
-        "price": 165.0,
+        "price": 155.98,
         "url": "https://pricespy.co.uk/go-to-shop/1751/offer/B0FQF32239?client_id=1551",
         "seller": "Amazon.co.uk",
         "title": "Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Hearing Aid Feature, Bluetooth Headphones, Spatial Audio, High‑Fidelity Sound, USB‑C Charging",
@@ -33,12 +33,12 @@
         "posted_at": "",
         "trust": "trusted"
       },
-      "previous_checked_at": "2026-11-23T18:44:23+00:00",
+      "previous_checked_at": "2026-11-24T18:18:27+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
           "source": "PriceSpy",
-          "price": 165.0,
+          "price": 155.98,
           "url": "https://pricespy.co.uk/go-to-shop/1751/offer/B0FQF32239?client_id=1551",
           "seller": "Amazon.co.uk",
           "title": "Apple AirPods Pro 3 Wireless Earbuds, Active Noise Cancellation, Live Translation, Heart Rate Sensing, Hearing Aid Feature, Bluetooth Headphones, Spatial Audio, High‑Fidelity Sound, USB‑C Charging",
@@ -48,6 +48,34 @@
           "kind": "price",
           "posted_at": "",
           "trust": "trusted"
+        },
+        {
+          "item_id": "airpods-pro-3",
+          "source": "PriceSpy",
+          "price": 158.49,
+          "url": "https://pricespy.co.uk/go-to-shop/42367/offer/A1T-AJHJUB3VBR?client_id=1551",
+          "seller": "A1 Tech Deals",
+          "title": "Apple AirPods Pro 3rd Gen USB-C Wireless Earbuds - White",
+          "in_stock": true,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "price",
+          "posted_at": "",
+          "trust": "unverified"
+        },
+        {
+          "item_id": "airpods-pro-3",
+          "source": "HotUKDeals",
+          "price": 159.0,
+          "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wvoucher-code-5045810",
+          "seller": "Joybuy",
+          "title": "Apple AirPods Pro 3 - w/voucher code",
+          "in_stock": null,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "deal",
+          "posted_at": "2026-11-24T19:26:59+00:00",
+          "trust": "unverified"
         },
         {
           "item_id": "airpods-pro-3",
@@ -132,7 +160,7 @@
     "airpods-4-anc": {
       "name": "Apple AirPods 4 with Active Noise Cancellation",
       "target_price": 100.0,
-      "checked_at": "2026-11-24T18:18:27+00:00",
+      "checked_at": "2026-11-25T17:36:56+00:00",
       "best": {
         "item_id": "airpods-4-anc",
         "source": "PriceSpy",
@@ -161,7 +189,7 @@
         "posted_at": "",
         "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-23T22:38:51+00:00",
+      "previous_checked_at": "2026-11-24T18:18:27+00:00",
       "offers": [
         {
           "item_id": "airpods-4-anc",
@@ -170,20 +198,6 @@
           "url": "https://pricespy.co.uk/go-to-shop/42367/offer/A1T-NXRCKV9QEV?client_id=1551",
           "seller": "A1 Tech Deals",
           "title": "Apple AirPods 4 (ANC) Wireless Earbuds - White",
-          "in_stock": true,
-          "condition": "new",
-          "currency": "GBP",
-          "kind": "price",
-          "posted_at": "",
-          "trust": "unverified"
-        },
-        {
-          "item_id": "airpods-4-anc",
-          "source": "PriceSpy",
-          "price": 109.0,
-          "url": "https://pricespy.co.uk/go-to-shop/42857/offer/10018002?client_id=1551",
-          "seller": "Joybuy",
-          "title": "Apple AirPods 4 with Active Noise Cancellation",
           "in_stock": true,
           "condition": "new",
           "currency": "GBP",
@@ -212,6 +226,20 @@
           "url": "https://pricespy.co.uk/go-to-shop/40430/offer/56622118404474?client_id=1551",
           "seller": "Gadcet",
           "title": "Apple AirPods 4 with ANC & USB-C Charging Case - New",
+          "in_stock": true,
+          "condition": "new",
+          "currency": "GBP",
+          "kind": "price",
+          "posted_at": "",
+          "trust": "unverified"
+        },
+        {
+          "item_id": "airpods-4-anc",
+          "source": "PriceSpy",
+          "price": 154.0,
+          "url": "https://pricespy.co.uk/go-to-shop/15126/offer/FD6C020DAD9AA25E2899F3C55B63916B?client_id=1551",
+          "seller": "EE Tech & Gaming",
+          "title": "Apple AirPods 4 with Active Noise Cancellation White Buy Now",
           "in_stock": true,
           "condition": "new",
           "currency": "GBP",
