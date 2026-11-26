@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:10:09+00:00",
+  "generated_at": "2026-11-26T01:46:03+00:00",
   "interests": {
     "tags": [
       "headphones",
@@ -17,89 +17,753 @@
   },
   "deals": [
     {
-      "id": "5046890",
-      "title": "PS Plus Essential Monthly Games (December) - Tony Hawk’s Pro Skater 3+4, Dragon Ball Xenoverse 2, Amnesia: The Bunker",
-      "url": "https://www.hotukdeals.com/deals/ps-plus-essential-monthly-games-december-tony-hawks-pro-skater-34-dragon-ball-xenoverse-2-amnesia-the-bunker-5046890",
-      "price": null,
-      "merchant": "Playstation Store",
+      "id": "5047151",
+      "title": "Broken Sword - The Serpants Curse (Nintendo Switch)",
+      "url": "https://www.hotukdeals.com/deals/broken-sword-the-serpants-curse-5047151",
+      "price": 4.99,
+      "merchant": "Nintendo eShop",
       "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/GQh5a/5046890_1/re/300x300/qt/55/5046890_1.jpg",
-      "posted_at": "2026-11-25T16:54:00+00:00",
-      "temperature": 157,
-      "score": 65.7,
+      "image": "https://images.hotukdeals.com/threads/raw/6lSZX/5047151_1/re/300x300/qt/55/5047151_1.jpg",
+      "posted_at": "2026-11-25T23:48:04+00:00",
+      "temperature": 125,
+      "score": 60.45,
       "reasons": [
         "You follow gaming",
         "In Gaming",
+        "Hot: 125°"
+      ],
+      "feeds": [
+        "hot",
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047329",
+      "title": "LEGO Super Mario 72037 Mario Kart: Mario & Standard Kart - with code - Free C&C",
+      "url": "https://www.hotukdeals.com/deals/lego-super-mario-72037-with-code-free-cc-5047329",
+      "price": 90.0,
+      "merchant": "Argos",
+      "category": "Family & Kids",
+      "image": "https://images.hotukdeals.com/threads/raw/XvWBD/5047329_1/re/300x300/qt/55/5047329_1.jpg",
+      "posted_at": "2026-11-26T01:37:41+00:00",
+      "temperature": 102,
+      "score": 48.89,
+      "reasons": [
+        "You follow lego",
+        "Hot: 102°"
+      ],
+      "feeds": [
+        "hot",
+        "tag/lego"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047426",
+      "title": "Samsung Smart TV 65-Inch U8000H Crystal UHD 4K TV, HDR10+, Motion Xcelerator, Dynamic Sound Pack, Gaming Hub, Vision AI Companion [2026]",
+      "url": "https://www.hotukdeals.com/deals/samsung-smart-tv-65-inch-u8000h-crystal-uhd-4k-tv-hdr10-motion-xcelerator-dynamic-sound-pack-gaming-hub-vision-ai-companion-2026-5047426",
+      "price": 386.1,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/Uhbyi/5047426_1/re/300x300/qt/55/5047426_1.jpg",
+      "posted_at": "2026-11-26T01:40:51+00:00",
+      "temperature": null,
+      "score": 39.87,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "new",
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047252",
+      "title": "Walkmaner Cassette Player/Recorder, AM/FM Radio, Portable, Built-in Speakers, Black (Pink £19.54 / White £20.39) - Sold by Go Fun Club / FBA",
+      "url": "https://www.hotukdeals.com/deals/walkmaner-cassette-playerrecorder-amfm-radio-portable-built-in-speakers-black-pink-ps1954-white-ps2039-sold-by-go-fun-club-fba-5047252",
+      "price": 16.99,
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/mAYzL/5047252_1/re/300x300/qt/55/5047252_1.jpg",
+      "posted_at": "2026-11-26T00:28:14+00:00",
+      "temperature": 146,
+      "score": 39.01,
+      "reasons": [
+        "In Electronics",
+        "Hot: 146°"
+      ],
+      "feeds": [
+        "hot"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047406",
+      "title": "GameSir Translucent Green X5 Lite for XBOX, Phone Controller, 25th Anniversary Translucent Edition",
+      "url": "https://www.hotukdeals.com/deals/gamesir-translucent-green-x5-lite-for-xbox-phone-controller-25th-anniversary-translucent-edition-5047406",
+      "price": 38.24,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/PNe79/5047406_1/re/300x300/qt/55/5047406_1.jpg",
+      "posted_at": "2026-11-26T00:58:17+00:00",
+      "temperature": null,
+      "score": 38.79,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "new",
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047405",
+      "title": "The Sinking City 2 (Deluxe £25.33 Premium £27.62) / The Sinking City Remastered £4.33 (Deluxe £6.56) - PC Steam / PC GOG",
+      "url": "https://www.hotukdeals.com/deals/the-sinking-city-2-deluxe-ps2533-premium-ps2762-the-sinking-city-remastered-ps433-deluxe-ps656-pc-steam-pc-gog-5047405",
+      "price": 22.99,
+      "merchant": "Gamesplanet ",
+      "category": "Gaming",
+      "image": "https://www.hotukdeals.com/assets/img/default-deal_ce491.svg",
+      "posted_at": "2026-11-26T00:58:10+00:00",
+      "temperature": null,
+      "score": 38.79,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "new",
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047250",
+      "title": "DJI Osmo Pocket 3, Vlogging Camera with 1'' CMOS & 4K/120fps Video",
+      "url": "https://www.hotukdeals.com/deals/dji-osmo-pocket-3-vlogging-camera-with-1-cmos-4k120fps-video-5047250",
+      "price": 221.4,
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/U0xD8/5047250_1/re/300x300/qt/55/5047250_1.jpg",
+      "posted_at": "2026-11-25T23:56:50+00:00",
+      "temperature": 157,
+      "score": 38.58,
+      "reasons": [
+        "In Electronics",
         "Hot: 157°"
       ],
       "feeds": [
-        "hot",
-        "tag/gaming"
+        "hot"
       ],
       "watchlist_item": ""
     },
     {
-      "id": "5046760",
-      "title": "[PC-GOG] Theme Hospital - PEGI 12 - Windows / macOS",
-      "url": "https://www.hotukdeals.com/deals/pc-gog-theme-hospital-pegi-12-windows-macos-5046760",
-      "price": 0.85,
-      "merchant": "GOG",
+      "id": "5047397",
+      "title": "Arcade1Up Ms. PAC-MAN Classic SE Arcade Game Machine",
+      "url": "https://www.hotukdeals.com/deals/arcade1up-ms-pac-man-classic-se-arcade-game-machine-5047397",
+      "price": 229.99,
+      "merchant": "Amazon",
       "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/Cx4I8/5046760_1/re/300x300/qt/55/5046760_1.jpg",
-      "posted_at": "2026-11-25T16:37:38+00:00",
-      "temperature": 155,
-      "score": 64.95,
+      "image": "https://images.hotukdeals.com/threads/raw/o2rmh/5047397_1/re/300x300/qt/55/5047397_1.jpg",
+      "posted_at": "2026-11-26T00:45:16+00:00",
+      "temperature": null,
+      "score": 38.47,
       "reasons": [
         "You follow gaming",
-        "In Gaming",
-        "Hot: 155°"
+        "In Gaming"
       ],
       "feeds": [
-        "hot",
         "tag/gaming"
       ],
       "watchlist_item": ""
     },
     {
-      "id": "5045324",
-      "title": "Apple 2026 MacBook Pro Laptop, 16.3-inch PROLED XDR Display, M5 Pro chip 48GB Unified Memory, 18-core CPU and 20-core GPU",
-      "url": "https://www.hotukdeals.com/deals/apple-2026-macbook-pro-laptop-163-inch-proled-xdr-display-m5-pro-chip-48gb-unified-memory-18-core-cpu-and-20-core-gpu-5045324",
-      "price": 3662.97,
+      "id": "5047377",
+      "title": "ASUS V16 V3607VH Gaming Laptop | 16.0\" WUXGA 144Hz Screen | Intel Core 7 240H | NVIDIA GeForce RTX 5070 | 16GB RAM | 512GB SSD",
+      "url": "https://www.hotukdeals.com/deals/asus-v16-v3607vh-gaming-laptop-160-wuxga-144hz-screen-intel-core-7-240h-nvidia-geforce-rtx-5070-16gb-ram-512gb-ssd-5047377",
+      "price": 1299.99,
       "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/1vpBZ/5045324_1/re/300x300/qt/55/5045324_1.jpg",
-      "posted_at": "2026-11-25T16:55:52+00:00",
-      "temperature": 112,
-      "score": 64.05,
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/9x1fd/5047377_1/re/300x300/qt/55/5047377_1.jpg",
+      "posted_at": "2026-11-26T00:28:39+00:00",
+      "temperature": null,
+      "score": 38.06,
       "reasons": [
-        "You follow apple",
-        "In Electronics",
-        "Hot: 112°"
+        "You follow gaming",
+        "In Gaming"
       ],
       "feeds": [
-        "hot",
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047376",
+      "title": "Star Wars: Galactic Racer Standard Edition (PS5 / Xbox Series X) - PEGI 16",
+      "url": "https://www.hotukdeals.com/deals/star-wars-galactic-racer-standard-edition-ps5-xbox-series-x-5047376",
+      "price": 32.99,
+      "merchant": "Smyths",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/iEbo9/5047376_1/re/300x300/qt/55/5047376_1.jpg",
+      "posted_at": "2026-11-26T00:28:16+00:00",
+      "temperature": null,
+      "score": 38.05,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047375",
+      "title": "CyberPower Gaming PC • AMD Ryzen 7 9800X3D Processor - Instore Costco",
+      "url": "https://www.hotukdeals.com/deals/cyberpower-gaming-pc-amd-ryzen-7-9800x3d-processor-instore-costco-5047375",
+      "price": 2279.98,
+      "merchant": "",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/R2Urz/5047375_1/re/300x300/qt/55/5047375_1.jpg",
+      "posted_at": "2026-11-26T00:27:52+00:00",
+      "temperature": null,
+      "score": 38.04,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047371",
+      "title": "ASUS V16 V3607VH Gaming Laptop | 16.0\" WUXGA 144Hz Screen | Intel Core 7 240H | NVIDIA GeForce RTX 5060 | 16GB RAM | 512GB SSD",
+      "url": "https://www.hotukdeals.com/deals/asus-v16-v3607vh-gaming-laptop-160-wuxga-144hz-screen-intel-core-7-240h-nvidia-geforce-rtx-5060-16gb-ram-512gb-ssd-5047371",
+      "price": 999.99,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/sZ5SX/5047371_1/re/300x300/qt/55/5047371_1.jpg",
+      "posted_at": "2026-11-26T00:26:44+00:00",
+      "temperature": null,
+      "score": 38.01,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047369",
+      "title": "RoboCop: Rogue City - Unfinished Business (PS5) - PEGI 18 - Free C&C only",
+      "url": "https://www.hotukdeals.com/deals/robocop-rogue-city-unfinished-business-ps5-free-cc-only-5047369",
+      "price": 9.99,
+      "merchant": "Smyths",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/5iErF/5047369_1/re/300x300/qt/55/5047369_1.jpg",
+      "posted_at": "2026-11-26T00:25:37+00:00",
+      "temperature": null,
+      "score": 37.99,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047368",
+      "title": "Apple AirPods 5, MKFW4ZM/A INSTORE COSTCO",
+      "url": "https://www.hotukdeals.com/deals/apple-airpods-5-mkfw4zma-instore-costco-5047368",
+      "price": 94.78,
+      "merchant": "",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/QqaNj/5047368_1/re/300x300/qt/55/5047368_1.jpg",
+      "posted_at": "2026-11-26T00:24:12+00:00",
+      "temperature": null,
+      "score": 37.95,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones",
+        "tag/apple",
+        "tag/apple-airpods"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047343",
+      "title": "Apple AirPods 5, MKFW4ZM/A - Instore",
+      "url": "https://www.hotukdeals.com/deals/apple-airpods-5-mkfw4zma-5047343",
+      "price": 94.78,
+      "merchant": "Costco",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/hu4N0/5047343_1/re/300x300/qt/55/5047343_1.jpg",
+      "posted_at": "2026-11-26T00:23:22+00:00",
+      "temperature": null,
+      "score": 37.93,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones",
+        "tag/apple",
+        "tag/apple-airpods"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047349",
+      "title": "Apple AirPods 5 with Wireless Charging Case, MKFT4ZM/A - Instore",
+      "url": "https://www.hotukdeals.com/deals/apple-airpods-5-with-wireless-charging-case-mkft4zma-5047349",
+      "price": 113.98,
+      "merchant": "Costco",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/QXYIA/5047349_1/re/300x300/qt/55/5047349_1.jpg",
+      "posted_at": "2026-11-26T00:07:36+00:00",
+      "temperature": null,
+      "score": 37.55,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones",
+        "tag/apple",
+        "tag/apple-airpods"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047340",
+      "title": "Call of Duty: Black Ops 7 PS5 - Instore C&C only (limited stores)",
+      "url": "https://www.hotukdeals.com/deals/call-of-duty-black-ops-7-ps5-instore-cc-only-5047340",
+      "price": 9.99,
+      "merchant": "Smyths",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/C01Pr/5047340_1/re/300x300/qt/55/5047340_1.jpg",
+      "posted_at": "2026-11-26T00:05:36+00:00",
+      "temperature": null,
+      "score": 37.5,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047334",
+      "title": "Castlevania: Belmont's Curse-Midnight Edition - Xbox Series X",
+      "url": "https://www.hotukdeals.com/deals/castlevania-belmonts-curse-midnight-edition-xbox-series-x-5047334",
+      "price": 29.99,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/p3R86/5047334_1/re/300x300/qt/55/5047334_1.jpg",
+      "posted_at": "2026-11-26T00:04:33+00:00",
+      "temperature": null,
+      "score": 37.48,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047327",
+      "title": "STAR WARS: Galactic Racer Deluxe Edition - PS5 (Exclusive to Amazon.co.uk)",
+      "url": "https://www.hotukdeals.com/deals/star-wars-galactic-racer-deluxe-edition-playstation-5-exclusive-to-amazoncouk-5047327",
+      "price": 48.74,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/ELpoi/5047327_1/re/300x300/qt/55/5047327_1.jpg",
+      "posted_at": "2026-11-26T00:02:44+00:00",
+      "temperature": null,
+      "score": 37.43,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047325",
+      "title": "Shokz OpenFit 2 SE Open Ear Headphones - Instore",
+      "url": "https://www.hotukdeals.com/deals/shokz-openfit-2-se-open-ear-headphones-5047325",
+      "price": 71.98,
+      "merchant": "Costco",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/Ocy14/5047325_1/re/300x300/qt/55/5047325_1.jpg",
+      "posted_at": "2026-11-26T00:00:34+00:00",
+      "temperature": null,
+      "score": 37.38,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047324",
+      "title": "5 Golden keys for Borderlands 4",
+      "url": "https://www.hotukdeals.com/deals/5-golden-keys-for-borderlands-4-5047324",
+      "price": null,
+      "merchant": "Gearbox Software",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/TPIJM/5047324_1/re/300x300/qt/55/5047324_1.jpg",
+      "posted_at": "2026-11-25T23:59:56+00:00",
+      "temperature": null,
+      "score": 37.37,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047320",
+      "title": "Acer Predator GM7000 Heatsink 4TB SSD, Gen4, NVMe M.2 SSD, DRAM, Up to 7400 MB/s, - Prime Exclusive - Sold by BIWIN Tech / FBA",
+      "url": "https://www.hotukdeals.com/deals/acer-predator-gm7000-heatsink-4tb-ssd-gen4-nvme-m2-ssd-dram-up-to-7400-mbs-5047320",
+      "price": 417.35,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/HCCF2/5047320_1/re/300x300/qt/55/5047320_1.jpg",
+      "posted_at": "2026-11-25T23:51:39+00:00",
+      "temperature": null,
+      "score": 37.17,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5046909",
+      "title": "LG 55\" 55NU8E0B3LA 4K NanoCell AI Smart TV (2026 model)",
+      "url": "https://www.hotukdeals.com/deals/lg-55-55nu8e0b3la-4k-nanocell-ai-smart-tv-2026-model-5046909",
+      "price": 329.99,
+      "merchant": "Argos",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/vzEbP/5046909_1/re/300x300/qt/55/5046909_1.jpg",
+      "posted_at": "2026-11-25T23:36:57+00:00",
+      "temperature": 123,
+      "score": 36.93,
+      "reasons": [
+        "In Electronics",
+        "Hot: 123°"
+      ],
+      "feeds": [
+        "hot"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047303",
+      "title": "Apple Studio Display XDR - Standard Glass with VESA Mount Adaptor - Free C&C",
+      "url": "https://www.hotukdeals.com/deals/apple-studio-display-xdr-standard-glass-with-vesa-mount-adaptor-5047303",
+      "price": 2339.1,
+      "merchant": "Argos",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/ZcwNV/5047303_1/re/300x300/qt/55/5047303_1.jpg",
+      "posted_at": "2026-11-25T23:12:14+00:00",
+      "temperature": null,
+      "score": 36.24,
+      "reasons": [
+        "You follow apple",
+        "In Electronics"
+      ],
+      "feeds": [
         "tag/apple"
       ],
       "watchlist_item": ""
     },
     {
-      "id": "5046692",
-      "title": "Sennheiser HD 569 Closed‑Back Over‑Ear Wired Headphones",
-      "url": "https://www.hotukdeals.com/deals/sennheiser-hd-569-closedback-overear-wired-headphones-5046692",
-      "price": 65.99,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/18R3a/5046692_1/re/300x300/qt/55/5046692_1.jpg",
-      "posted_at": "2026-11-25T15:51:46+00:00",
-      "temperature": 130,
-      "score": 62.2,
+      "id": "5047286",
+      "title": "Sid Meier's Civilization VII (Nintendo Switch Game) - Import - W/Code - Sold by The Game Collection Outlet",
+      "url": "https://www.hotukdeals.com/deals/sid-meiers-civilization-vii-switch-new-and-sealed-free-shipping-import-5047286",
+      "price": 38.9,
+      "merchant": "eBay",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/Ntw9v/5047286_1/re/300x300/qt/55/5047286_1.jpg",
+      "posted_at": "2026-11-25T22:47:50+00:00",
+      "temperature": null,
+      "score": 35.68,
       "reasons": [
-        "You follow headphones",
-        "In Electronics",
-        "Hot: 130°"
+        "You follow gaming",
+        "In Gaming"
       ],
       "feeds": [
-        "hot",
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047272",
+      "title": "Roccat Vulcan TKL Mechanical Gaming Keyboard (UK Layout) (Black) (Red Linear switch, roccat titan)",
+      "url": "https://www.hotukdeals.com/deals/roccat-vulkan-tkl-rgb-mechanical-keyboard-red-switches-red-linear-switch-roccat-titan-5047272",
+      "price": 24.95,
+      "merchant": "The Game Collection",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/RvPTx/5047272_1/re/300x300/qt/55/5047272_1.jpg",
+      "posted_at": "2026-11-25T22:27:21+00:00",
+      "temperature": null,
+      "score": 35.21,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047267",
+      "title": "Commandos Origins Deluxe Edition (Xbox Series X)",
+      "url": "https://www.hotukdeals.com/deals/commandos-origins-deluxe-edition-xbox-series-x-5047267",
+      "price": 19.95,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/lu0mw/5047267_1/re/300x300/qt/55/5047267_1.jpg",
+      "posted_at": "2026-11-25T22:24:05+00:00",
+      "temperature": null,
+      "score": 35.14,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047266",
+      "title": "Monopoly: Star Wars Heroes vs Villains (PS5)",
+      "url": "https://www.hotukdeals.com/deals/monopoly-star-wars-heroes-vs-villains-ps5-5047266",
+      "price": 14.99,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/WELp4/5047266_1/re/300x300/qt/55/5047266_1.jpg",
+      "posted_at": "2026-11-25T22:23:02+00:00",
+      "temperature": null,
+      "score": 35.11,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047240",
+      "title": "Dead Island 2 Ultimate Edition PC (Steam) Key",
+      "url": "https://www.hotukdeals.com/deals/dead-island-2-ultimate-edition-pc-steam-key-5047240",
+      "price": 4.49,
+      "merchant": "Loaded",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/cXJRv/5047240_1/re/300x300/qt/55/5047240_1.jpg",
+      "posted_at": "2026-11-25T21:47:27+00:00",
+      "temperature": null,
+      "score": 34.32,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047179",
+      "title": "8BitDo Ultimate C Wired Gaming Controller for Xbox, RGB and Hall Effect Joysticks Xbox Gamepass 1 month Ult Inc - Sold by Game Spot Store",
+      "url": "https://www.hotukdeals.com/deals/8bitdo-ultimate-c-wired-gaming-controller-for-xbox-rgb-lighting-fire-ring-and-hall-effect-joysticks-windows-1011-5047179",
+      "price": 23.89,
+      "merchant": "AliExpress",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/lXXVh/5047179_1/re/300x300/qt/55/5047179_1.jpg",
+      "posted_at": "2026-11-25T21:15:58+00:00",
+      "temperature": null,
+      "score": 33.63,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047203",
+      "title": "Mafia: The Old Country (PS5)",
+      "url": "https://www.hotukdeals.com/deals/mafia-the-old-country-ps5-5047203",
+      "price": 15.99,
+      "merchant": "John Lewis &amp; Partners",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/84zfV/5047203_1/re/300x300/qt/55/5047203_1.jpg",
+      "posted_at": "2026-11-25T21:07:24+00:00",
+      "temperature": null,
+      "score": 33.45,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047193",
+      "title": "Samsung Galaxy Buds3 | White",
+      "url": "https://www.hotukdeals.com/deals/samsung-galaxy-buds3-white-5047193",
+      "price": 39.95,
+      "merchant": "Harvey Norman",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/w2ySE/5047193_1/re/300x300/qt/55/5047193_1.jpg",
+      "posted_at": "2026-11-25T20:56:58+00:00",
+      "temperature": null,
+      "score": 33.23,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047189",
+      "title": "Sony WH-1000XM4C Wireless Noise Cancelling Headphones Over-ear, bluetooth - Black",
+      "url": "https://www.hotukdeals.com/deals/sony-wh-1000xm4c-wireless-noise-cancelling-headphones-over-ear-bluetooth-black-5047189",
+      "price": 161.1,
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/VsnQY/5047189_1/re/300x300/qt/55/5047189_1.jpg",
+      "posted_at": "2026-11-25T20:54:08+00:00",
+      "temperature": null,
+      "score": 33.17,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047187",
+      "title": "APPLE 11\" Refurbished iPad Air (2025) - 128 GB, Purple (Excellent Condition)",
+      "url": "https://www.hotukdeals.com/deals/apple-11-refurbished-ipad-air-2025-128-gb-purple-excellent-condition-5047187",
+      "price": 449.0,
+      "merchant": "Currys",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/6uGZM/5047187_1/re/300x300/qt/55/5047187_1.jpg",
+      "posted_at": "2026-11-25T20:52:59+00:00",
+      "temperature": null,
+      "score": 33.14,
+      "reasons": [
+        "You follow apple",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/apple"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047117",
+      "title": "OPPO Enco Buds 3s TWS Earbuds AI Up to 54 Hours of Playback IP55 Dust & Water Resistance with Code & Perks - w/code - sold by OPPO UK Store",
+      "url": "https://www.hotukdeals.com/deals/oppo-enco-buds-3s-tws-earbuds-ai-up-to-54-hours-of-playback-ip55-dust-water-resistance-with-code-and-perks-sold-by-oppo-uk-store-5047117",
+      "price": 15.96,
+      "merchant": "AliExpress",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/cqyEO/5047117_1/re/300x300/qt/55/5047117_1.jpg",
+      "posted_at": "2026-11-25T19:54:24+00:00",
+      "temperature": null,
+      "score": 31.92,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/headphones"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047092",
+      "title": "PlayStation5 Console 1TB (w/Disc) – Two DualSense Wireless Controllers Bundle (After Christmas Delivery)",
+      "url": "https://www.hotukdeals.com/deals/ps5-2-controllers-5047092",
+      "price": 609.99,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/5ERWn/5047092_1/re/300x300/qt/55/5047092_1.jpg",
+      "posted_at": "2026-11-25T19:24:38+00:00",
+      "temperature": null,
+      "score": 31.31,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047090",
+      "title": "Bose QuietComfort Wireless Noise Cancelling Headphones + 65W Ugreen Nexode Charger + Add On Item With Auto Discount At Checkout",
+      "url": "https://www.hotukdeals.com/deals/bose-quietcomfort-wireless-noise-cancelling-headphones-65w-ugreen-nexode-charger-add-on-item-with-auto-discount-at-checkout-5047090",
+      "price": 159.63,
+      "merchant": "Joybuy",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/ob1mu/5047090_1/re/300x300/qt/55/5047090_1.jpg",
+      "posted_at": "2026-11-25T19:22:41+00:00",
+      "temperature": null,
+      "score": 31.28,
+      "reasons": [
+        "You follow headphones",
+        "In Electronics"
+      ],
+      "feeds": [
         "tag/headphones"
       ],
       "watchlist_item": ""
@@ -114,7 +778,7 @@
       "image": "https://images.hotukdeals.com/threads/raw/IpNDD/5045810_1/re/300x300/qt/55/5045810_1.jpg",
       "posted_at": "2026-11-24T19:26:59+00:00",
       "temperature": null,
-      "score": 43.33,
+      "score": 31.11,
       "reasons": [
         "On your watchlist: Apple AirPods Pro 3",
         "You follow headphones",
@@ -129,366 +793,201 @@
       "watchlist_item": "airpods-pro-3"
     },
     {
+      "id": "5047076",
+      "title": "Celeste - PC Steam Game",
+      "url": "https://www.hotukdeals.com/deals/celeste-pc-steam-game-ps399-at-steam-5047076",
+      "price": 3.99,
+      "merchant": "Steam",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/pJ0YA/5047076_1/re/300x300/qt/55/5047076_1.jpg",
+      "posted_at": "2026-11-25T19:11:08+00:00",
+      "temperature": null,
+      "score": 31.04,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047074",
+      "title": "SILENT HILL f - PC Steam",
+      "url": "https://www.hotukdeals.com/deals/silent-hill-f-pc-steam-5047074",
+      "price": 15.39,
+      "merchant": "Steam",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/NKiF5/5047074_1/re/300x300/qt/55/5047074_1.jpg",
+      "posted_at": "2026-11-25T19:09:21+00:00",
+      "temperature": null,
+      "score": 31.01,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5045275",
+      "title": "ASDA Steak Craft T-Bone Steak 550g - in-store",
+      "url": "https://www.hotukdeals.com/deals/asda-steak-craft-t-bone-steak-550g-in-store-5045275",
+      "price": 5.0,
+      "merchant": "ASDA Groceries",
+      "category": "Groceries",
+      "image": "https://images.hotukdeals.com/threads/raw/1MAX1/5045275_1/re/300x300/qt/55/5045275_1.jpg",
+      "posted_at": "2026-11-26T00:10:01+00:00",
+      "temperature": 545,
+      "score": 30.88,
+      "reasons": [
+        "Hot: 545°"
+      ],
+      "feeds": [
+        "hot"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047054",
+      "title": "Meta Quest 3S 128GB VR Headset – Resident Evil 4 Included, High-Definition Resolution",
+      "url": "https://www.hotukdeals.com/deals/meta-quest-3s-128gb-vr-headset-resident-evil-4-included-high-definition-resolution-5047054",
+      "price": 259.99,
+      "merchant": "Amazon",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/HZ5b6/5047054_1/re/300x300/qt/55/5047054_1.jpg",
+      "posted_at": "2026-11-25T18:50:22+00:00",
+      "temperature": null,
+      "score": 30.63,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047044",
+      "title": "Sniper Elite 5 - PC/Steam",
+      "url": "https://www.hotukdeals.com/deals/sniper-elite-5-pcsteam-5047044",
+      "price": 2.99,
+      "merchant": "Loaded",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/VTBcv/5047044_1/re/300x300/qt/55/5047044_1.jpg",
+      "posted_at": "2026-11-25T18:41:43+00:00",
+      "temperature": null,
+      "score": 30.46,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047040",
+      "title": "Acer Predator Orion 3000 PO3-665 Gaming Desktop - £780.69/£785.69 JoyPlus ( Nvidia RTX5060 / Intel Core i5-14400F / 16GB / 512GB )",
+      "url": "https://www.hotukdeals.com/deals/acer-predator-orion-3000-po3-665-gaming-desktop-ps78069-nvidia-rtx5060-intel-core-i5-14400f-16gb-ddr5-512gb-5047040",
+      "price": 809.99,
+      "merchant": "Joybuy",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/HwcbE/5047040_1/re/300x300/qt/55/5047040_1.jpg",
+      "posted_at": "2026-11-25T18:39:09+00:00",
+      "temperature": null,
+      "score": 30.41,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047010",
+      "title": "Theme Park - PC/GOG",
+      "url": "https://www.hotukdeals.com/deals/theme-park-pcgog-5047010",
+      "price": 0.79,
+      "merchant": "GOG",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/TsJ43/5047010_1/re/300x300/qt/55/5047010_1.jpg",
+      "posted_at": "2026-11-25T18:10:16+00:00",
+      "temperature": null,
+      "score": 29.86,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047007",
+      "title": "Yooka-Laylee and the Impossible Lair: Definitive Edition | Free Upgrade for Existing Owners on PS5, Switch 2 & PC @ Playtonic",
+      "url": "https://www.hotukdeals.com/deals/yooka-laylee-and-the-impossible-lair-definitive-edition-free-upgrade-for-existing-owners-on-ps5-switch-2-pc-5047007",
+      "price": null,
+      "merchant": "",
+      "category": "Gaming",
+      "image": "https://images.hotukdeals.com/threads/raw/ydNm1/5047007_1/re/300x300/qt/55/5047007_1.jpg",
+      "posted_at": "2026-11-25T18:06:31+00:00",
+      "temperature": null,
+      "score": 29.78,
+      "reasons": [
+        "You follow gaming",
+        "In Gaming"
+      ],
+      "feeds": [
+        "tag/gaming"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5046964",
+      "title": "Apple iPhone 18 Pro 512GB - Discount at Checkout",
+      "url": "https://www.hotukdeals.com/deals/apple-iphone-18-pro-512gb-collect-voucher-5046964",
+      "price": 1279.98,
+      "merchant": "Amazon",
+      "category": "Electronics",
+      "image": "https://images.hotukdeals.com/threads/raw/XzAKz/5046964_1/re/300x300/qt/55/5046964_1.jpg",
+      "posted_at": "2026-11-25T17:32:44+00:00",
+      "temperature": null,
+      "score": 29.14,
+      "reasons": [
+        "You follow apple",
+        "In Electronics"
+      ],
+      "feeds": [
+        "tag/apple"
+      ],
+      "watchlist_item": ""
+    },
+    {
       "id": "5046948",
-      "title": "Apple iPhone 18 Pro 512GB Sim Free Mobile Phone",
+      "title": "Apple iPhone 18 Pro 512GB Sim Free Mobile Phone (discount at checkout)",
       "url": "https://www.hotukdeals.com/deals/apple-iphone-18-pro-512gb-sim-free-mobile-phone-5046948",
       "price": 1279.98,
       "merchant": "Costco",
       "category": "Electronics",
-      "image": "https://www.hotukdeals.com/assets/img/default-deal_ce491.svg",
+      "image": "https://images.hotukdeals.com/threads/raw/hvbP8/5046948_1/re/300x300/qt/55/5046948_1.jpg",
       "posted_at": "2026-11-25T17:09:11+00:00",
       "temperature": null,
-      "score": 39.97,
+      "score": 28.71,
       "reasons": [
         "You follow apple",
         "In Electronics"
       ],
       "feeds": [
         "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046946",
-      "title": "Cheap iphone",
-      "url": "https://www.hotukdeals.com/deals/cheap-iphone-5046946",
-      "price": 1299.0,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://www.hotukdeals.com/assets/img/default-deal_ce491.svg",
-      "posted_at": "2026-11-25T17:08:08+00:00",
-      "temperature": null,
-      "score": 39.95,
-      "reasons": [
-        "You follow apple",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046933",
-      "title": "Sonic Mania - Encore DLC",
-      "url": "https://www.hotukdeals.com/deals/sonic-mania-encore-dlc-5046933",
-      "price": 1.0,
-      "merchant": "Humble Bundle",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/3pzKh/5046933_1/re/300x300/qt/55/5046933_1.jpg",
-      "posted_at": "2026-11-25T16:57:29+00:00",
-      "temperature": null,
-      "score": 39.68,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "new",
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046738",
-      "title": "Oppo Find X10 512GB + Oppo Watch X3 / Oppo Find X10 Pro Max + Oppo Watch X3 £989 with student discount/code + up to £200 bonus trade in",
-      "url": "https://www.hotukdeals.com/deals/oppo-find-x10-512gb-oppo-watch-x3-ps791-oppo-find-x10-pro-max-oppo-watch-x3-ps989-with-student-discountcode-ps989-5046738",
-      "price": 791.65,
-      "merchant": "Oppo",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/8OkAF/5046738_1/re/300x300/qt/55/5046738_1.jpg",
-      "posted_at": "2026-11-25T16:50:06+00:00",
-      "temperature": 122,
-      "score": 39.57,
-      "reasons": [
-        "In Electronics",
-        "Hot: 122°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046916",
-      "title": "TURTLE BEACH Burst II Pro Wireless Optical Gaming Mouse - White (Free C&C)",
-      "url": "https://www.hotukdeals.com/deals/turtle-beach-burst-ii-pro-wireless-optical-gaming-mouse-white-free-cc-5046916",
-      "price": 44.97,
-      "merchant": "Currys",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/uV5LA/5046916_1/re/300x300/qt/55/5046916_1.jpg",
-      "posted_at": "2026-11-25T16:43:19+00:00",
-      "temperature": null,
-      "score": 39.32,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "new",
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046915",
-      "title": "Resident Evil 4 Gold Edition - Pre Order - Nintendo Switch 2 at checkout",
-      "url": "https://www.hotukdeals.com/deals/resident-evil-4-gold-edition-nintendo-switch-2-5046915",
-      "price": 38.69,
-      "merchant": "Currys",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/6chNr/5046915_1/re/300x300/qt/55/5046915_1.jpg",
-      "posted_at": "2026-11-25T16:43:14+00:00",
-      "temperature": null,
-      "score": 39.31,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "new",
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046913",
-      "title": "Resident Evil 2 Deluxe Edition - Pre Order - Nintendo Switch 2 - Discount at Checkout",
-      "url": "https://www.hotukdeals.com/deals/resident-evil-2-deluxe-edition-nintendo-switch-2-5046913",
-      "price": 29.69,
-      "merchant": "Currys",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/P3pGy/5046913_1/re/300x300/qt/55/5046913_1.jpg",
-      "posted_at": "2026-11-25T16:41:25+00:00",
-      "temperature": null,
-      "score": 39.27,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "new",
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046911",
-      "title": "Paw Patrol Dino World - PS5 - Free C&C",
-      "url": "https://www.hotukdeals.com/deals/paw-patrol-dino-world-ps5-5046911",
-      "price": 19.99,
-      "merchant": "Smyths",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/0I6sy/5046911_1/re/300x300/qt/55/5046911_1.jpg",
-      "posted_at": "2026-11-25T16:40:46+00:00",
-      "temperature": null,
-      "score": 39.25,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046720",
-      "title": "Sonos Arc Ultra Smart Soundbar with Dolby Atmos & Voice Control - White",
-      "url": "https://www.hotukdeals.com/deals/sonos-arc-ultra-ps734-at-donaghybros-5046720",
-      "price": 734.0,
-      "merchant": "Donaghy Bros",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/HDk3t/5046720_1/re/300x300/qt/55/5046720_1.jpg",
-      "posted_at": "2026-11-25T16:57:51+00:00",
-      "temperature": 110,
-      "score": 39.23,
-      "reasons": [
-        "In Electronics",
-        "Hot: 110°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046906",
-      "title": "Dog Man: Bark in Action - PS5 - Free C&C Only",
-      "url": "https://www.hotukdeals.com/deals/dog-man-bark-in-action-ps5-5046906",
-      "price": 26.99,
-      "merchant": "Smyths",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/Cm7be/5046906_1/re/300x300/qt/55/5046906_1.jpg",
-      "posted_at": "2026-11-25T16:39:19+00:00",
-      "temperature": null,
-      "score": 39.22,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046506",
-      "title": "Avowed (Premium Edition £15.99) - PC Steam / Steam Deck",
-      "url": "https://www.hotukdeals.com/deals/avowed-premium-edition-ps1599-pc-steam-steam-deck-5046506",
-      "price": 12.99,
-      "merchant": "Loaded",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/HF6Ox/5046506_1/re/300x300/qt/55/5046506_1.jpg",
-      "posted_at": "2026-11-25T16:20:41+00:00",
-      "temperature": 126,
-      "score": 38.99,
-      "reasons": [
-        "In Gaming",
-        "Hot: 126°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046507",
-      "title": "512GB SANDISK microSD Express Card for Nintendo Switch 2 with Senior or Student Discounts",
-      "url": "https://www.hotukdeals.com/deals/512gb-sandisk-microsd-express-card-for-nintendo-switch-2-with-senior-or-student-discounts-5046507",
-      "price": 95.2,
-      "merchant": "SanDisk",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/qQlmX/5046507_1/re/300x300/qt/55/5046507_1.jpg",
-      "posted_at": "2026-11-25T16:02:31+00:00",
-      "temperature": 138,
-      "score": 38.99,
-      "reasons": [
-        "In Gaming",
-        "Hot: 138°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046865",
-      "title": "Dr. Livesey ROM and Death Edition - PC Game",
-      "url": "https://www.hotukdeals.com/deals/dr-livesey-rom-and-death-edition-pc-game-5046865",
-      "price": 0.54,
-      "merchant": "Steam",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/OGfv7/5046865_1/re/300x300/qt/55/5046865_1.jpg",
-      "posted_at": "2026-11-25T16:16:02+00:00",
-      "temperature": null,
-      "score": 38.63,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046859",
-      "title": "Halo: Spartan Strike - PC steam Game",
-      "url": "https://www.hotukdeals.com/deals/halo-spartan-strike-pc-game-5046859",
-      "price": 0.8,
-      "merchant": "Steam",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/D7U1w/5046859_1/re/300x300/qt/55/5046859_1.jpg",
-      "posted_at": "2026-11-25T16:11:43+00:00",
-      "temperature": null,
-      "score": 38.53,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046858",
-      "title": "Asus ROG Keris Wireless AimPoint Gaming Mouse, M - Black",
-      "url": "https://www.hotukdeals.com/deals/asus-rog-keris-wireless-aimpoint-gaming-mouse-m-black-5046858",
-      "price": 57.21,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/xyd92/5046858_1/re/300x300/qt/55/5046858_1.jpg",
-      "posted_at": "2026-11-25T16:11:29+00:00",
-      "temperature": null,
-      "score": 38.52,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5044542",
-      "title": "UGREEN Tripod Stand 70”/1.8m Selfie Stick with Bluetooth Remote - Sold by UGREEN GROUP LIMITED UK / FBA - Prime Exclusive",
-      "url": "https://www.hotukdeals.com/deals/ugreen-tripod-stand-7018m-selfie-stick-with-bluetooth-remote-sold-by-ugreen-group-limited-uk-fba-prime-exclusive-5044542",
-      "price": 13.52,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/5wGCe/5044542_1/re/300x300/qt/55/5044542_1.jpg",
-      "posted_at": "2026-11-25T15:57:47+00:00",
-      "temperature": 128,
-      "score": 38.5,
-      "reasons": [
-        "In Electronics",
-        "Hot: 128°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5045367",
-      "title": "WOLFANG Portable Mini Projector, 360° Stand, Auto Keystone, 1080P Supported Native 720P",
-      "url": "https://www.hotukdeals.com/deals/wolfang-portable-mini-projector-360-stand-auto-keystone-1080p-supported-native-720p-5045367",
-      "price": 29.99,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/DjZ5C/5045367_1/re/300x300/qt/55/5045367_1.jpg",
-      "posted_at": "2026-11-25T15:57:51+00:00",
-      "temperature": 125,
-      "score": 38.38,
-      "reasons": [
-        "In Electronics",
-        "Hot: 125°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5045840",
-      "title": "STAR WARS: Galactic Racer (Xbox Series X)",
-      "url": "https://www.hotukdeals.com/deals/star-wars-galactic-racer-xbox-series-x-5045840",
-      "price": 39.85,
-      "merchant": "Hit",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/7f4NL/5045840_1/re/300x300/qt/55/5045840_1.jpg",
-      "posted_at": "2026-11-25T15:54:27+00:00",
-      "temperature": 127,
-      "score": 38.38,
-      "reasons": [
-        "In Gaming",
-        "Hot: 127°"
-      ],
-      "feeds": [
-        "hot"
       ],
       "watchlist_item": ""
     },
@@ -502,113 +1001,13 @@
       "image": "https://images.hotukdeals.com/threads/raw/aC2tf/5046839_1/re/300x300/qt/55/5046839_1.jpg",
       "posted_at": "2026-11-25T15:52:47+00:00",
       "temperature": null,
-      "score": 38.06,
+      "score": 27.33,
       "reasons": [
         "You follow apple",
         "In Electronics"
       ],
       "feeds": [
         "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046079",
-      "title": "Immortals Fenyx Rising (Xbox One / Xbox Series X)",
-      "url": "https://www.hotukdeals.com/deals/immortals-fenyx-rising-xbox-one-xbox-series-x-5046079",
-      "price": 5.2,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/GvgGb/5046079_1/re/300x300/qt/55/5046079_1.jpg",
-      "posted_at": "2026-11-25T15:52:30+00:00",
-      "temperature": 118,
-      "score": 37.97,
-      "reasons": [
-        "In Gaming",
-        "Hot: 118°"
-      ],
-      "feeds": [
-        "hot"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046835",
-      "title": "Evoland 2 (Android Game App)",
-      "url": "https://www.hotukdeals.com/deals/evoland-2-android-game-app-5046835",
-      "price": 0.6,
-      "merchant": "Google Play",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/1CyDW/5046835_1/re/300x300/qt/55/5046835_1.jpg",
-      "posted_at": "2026-11-25T15:48:35+00:00",
-      "temperature": null,
-      "score": 37.96,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046833",
-      "title": "Arcadia Fallen / CLeM - Claim Free Prime Gaming PC",
-      "url": "https://www.hotukdeals.com/deals/arcadia-fallen-werewolf-the-apocalypse-earthblood-clem-claim-free-prime-gaming-5046833",
-      "price": null,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/Zgjur/5046833_1/re/300x300/qt/55/5046833_1.jpg",
-      "posted_at": "2026-11-25T15:44:33+00:00",
-      "temperature": null,
-      "score": 37.86,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046821",
-      "title": "Styx: Blades of Greed (Quartz Edition £11.27) - PC Steam",
-      "url": "https://www.hotukdeals.com/deals/styx-blades-of-greed-quartz-edition-ps1127-pc-steam-5046821",
-      "price": 9.89,
-      "merchant": "Gamesplanet ",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/LMesD/5046821_1/re/300x300/qt/55/5046821_1.jpg",
-      "posted_at": "2026-11-25T15:30:12+00:00",
-      "temperature": null,
-      "score": 37.51,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046813",
-      "title": "SILENT HILL f (PC GOG) w/ code",
-      "url": "https://www.hotukdeals.com/deals/silent-hill-f-pc-gog-w-code-5046813",
-      "price": 13.08,
-      "merchant": "GOG",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/KOFIJ/5046813_1/re/300x300/qt/55/5046813_1.jpg",
-      "posted_at": "2026-11-25T15:19:01+00:00",
-      "temperature": null,
-      "score": 37.25,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
       ],
       "watchlist_item": ""
     },
@@ -622,7 +1021,7 @@
       "image": "https://images.hotukdeals.com/threads/raw/NP2Hg/5046811_1/re/300x300/qt/55/5046811_1.jpg",
       "posted_at": "2026-11-25T15:18:14+00:00",
       "temperature": null,
-      "score": 37.23,
+      "score": 26.73,
       "reasons": [
         "You follow apple",
         "In Electronics"
@@ -633,82 +1032,40 @@
       "watchlist_item": ""
     },
     {
-      "id": "5046795",
-      "title": "Simon The Sorcerer Origins - PS5",
-      "url": "https://www.hotukdeals.com/deals/simon-the-sorcerer-origins-ps5-5046795",
-      "price": 11.99,
-      "merchant": "Playstation Store",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/W4Cij/5046795_1/re/300x300/qt/55/5046795_1.jpg",
-      "posted_at": "2026-11-25T15:12:40+00:00",
-      "temperature": null,
-      "score": 37.09,
+      "id": "5044582",
+      "title": "2kg British Chicken Drumsticks",
+      "url": "https://www.hotukdeals.com/deals/2kg-british-chicken-drumsticks-5044582",
+      "price": 3.99,
+      "merchant": "Lidl",
+      "category": "Groceries",
+      "image": "https://images.hotukdeals.com/threads/raw/rZro9/5044582_1/re/300x300/qt/55/5044582_1.jpg",
+      "posted_at": "2026-11-26T00:10:04+00:00",
+      "temperature": 215,
+      "score": 26.34,
       "reasons": [
-        "You follow gaming",
-        "In Gaming"
+        "Hot: 215°"
       ],
       "feeds": [
-        "tag/gaming"
+        "hot"
       ],
       "watchlist_item": ""
     },
     {
-      "id": "5046773",
-      "title": "EA SPORTS FC 27 - Standard Edition Nintendo Switch 2",
-      "url": "https://www.hotukdeals.com/deals/ea-sports-fc-27-standard-edition-nintendo-switch-2-cartridge-i-videogame-english-5046773",
-      "price": 28.99,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/WIs6Y/5046773_1/re/300x300/qt/55/5046773_1.jpg",
-      "posted_at": "2026-11-25T14:47:21+00:00",
-      "temperature": null,
-      "score": 36.5,
+      "id": "5045359",
+      "title": "12 Pack Irn-Bru / Zero / Diet 330ml",
+      "url": "https://www.hotukdeals.com/deals/12-pack-irn-bru-349-farmfoods-5-day-special-5045359",
+      "price": 3.49,
+      "merchant": "FarmFoods",
+      "category": "Groceries",
+      "image": "https://images.hotukdeals.com/threads/raw/JnrOm/5045359_1/re/300x300/qt/55/5045359_1.jpg",
+      "posted_at": "2026-11-26T00:10:00+00:00",
+      "temperature": 206,
+      "score": 26.13,
       "reasons": [
-        "You follow gaming",
-        "In Gaming"
+        "Hot: 206°"
       ],
       "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046769",
-      "title": "Steam - Crysol: Theater of Idols PC steam key - Sold by BF Supply",
-      "url": "https://www.hotukdeals.com/deals/steam-crysol-theater-of-idols-ps112-inc-ps040-service-fee-at-eneba-5046769",
-      "price": 1.1,
-      "merchant": "Eneba",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/7RNQG/5046769_1/re/300x300/qt/55/5046769_1.jpg",
-      "posted_at": "2026-11-25T14:45:46+00:00",
-      "temperature": null,
-      "score": 36.46,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046762",
-      "title": "[PC-GOG] Dungeon Keeper Gold (Windows & Mac) // or Dungeon Keeper 2 (Windows only) - PEGI 12 - each",
-      "url": "https://www.hotukdeals.com/deals/pc-dungeon-keeper-gold-windows-mac-dungeon-keeper-2-windows-only-pegi-12-price-each-5046762",
-      "price": 0.79,
-      "merchant": "GOG",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/1nMEe/5046762_1/re/300x300/qt/55/5046762_1.jpg",
-      "posted_at": "2026-11-25T14:38:36+00:00",
-      "temperature": null,
-      "score": 36.29,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
+        "hot"
       ],
       "watchlist_item": ""
     },
@@ -722,7 +1079,7 @@
       "image": "https://images.hotukdeals.com/threads/raw/FHLhP/5046758_1/re/300x300/qt/55/5046758_1.jpg",
       "posted_at": "2026-11-25T14:32:27+00:00",
       "temperature": null,
-      "score": 36.15,
+      "score": 25.96,
       "reasons": [
         "You follow headphones",
         "In Electronics"
@@ -733,22 +1090,40 @@
       "watchlist_item": ""
     },
     {
-      "id": "5046741",
-      "title": "Warhammer 40,000: Space Marine 2 - PC Steam Game",
-      "url": "https://www.hotukdeals.com/deals/warhammer-40000-space-marine-2-pc-steam-game-ps1374-at-steam-5046741",
-      "price": 13.74,
-      "merchant": "Steam",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/5TpG3/5046741_1/re/300x300/qt/55/5046741_1.jpg",
-      "posted_at": "2026-11-25T14:11:50+00:00",
-      "temperature": null,
-      "score": 35.67,
+      "id": "5038073",
+      "title": "Apples 79p, Tenderstem Broccoli £1.19, Easy Peelers 99p, Cucumbers 79p, Avocados £1.59, Golden Kiwi £1.49, Persimmon 49p, Fine Beans 99p",
+      "url": "https://www.hotukdeals.com/deals/apples-79p-tenderstem-broccoli-ps119-easy-peelers-99p-cucumbers-79p-avocados-ps159-golden-kiwi-ps149-persimmon-49p-fine-beans-99p-5038073",
+      "price": 0.49,
+      "merchant": "Lidl",
+      "category": "Groceries",
+      "image": "https://images.hotukdeals.com/threads/raw/PRMtl/5038073_1/re/300x300/qt/55/5038073_1.jpg",
+      "posted_at": "2026-11-26T00:10:03+00:00",
+      "temperature": 192,
+      "score": 25.79,
       "reasons": [
-        "You follow gaming",
-        "In Gaming"
+        "Hot: 192°"
       ],
       "feeds": [
-        "tag/gaming"
+        "hot"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5039198",
+      "title": "4 x 21 Day Matured British Beef Steaks 800g",
+      "url": "https://www.hotukdeals.com/deals/4-x-21-day-matured-british-beef-steaks-800g-5039198",
+      "price": 10.49,
+      "merchant": "Lidl",
+      "category": "Groceries",
+      "image": "https://images.hotukdeals.com/threads/raw/hY9Wt/5039198_1/re/300x300/qt/55/5039198_1.jpg",
+      "posted_at": "2026-11-26T00:10:04+00:00",
+      "temperature": 182,
+      "score": 25.53,
+      "reasons": [
+        "Hot: 182°"
+      ],
+      "feeds": [
+        "hot"
       ],
       "watchlist_item": ""
     },
@@ -762,7 +1137,7 @@
       "image": "https://images.hotukdeals.com/threads/raw/lNqv9/5046726_1/re/300x300/qt/55/5046726_1.jpg",
       "posted_at": "2026-11-25T13:58:29+00:00",
       "temperature": null,
-      "score": 35.37,
+      "score": 25.4,
       "reasons": [
         "You follow headphones",
         "In Electronics"
@@ -782,7 +1157,7 @@
       "image": "https://images.hotukdeals.com/threads/raw/U4opz/5046717_1/re/300x300/qt/55/5046717_1.jpg",
       "posted_at": "2026-11-25T13:52:02+00:00",
       "temperature": null,
-      "score": 35.22,
+      "score": 25.3,
       "reasons": [
         "You follow headphones",
         "In Electronics"
@@ -793,446 +1168,60 @@
       "watchlist_item": ""
     },
     {
-      "id": "5046704",
-      "title": "Venom Switch 2 Fast Charge 60W Power Adaptor (Nintendo Switch 2)",
-      "url": "https://www.hotukdeals.com/deals/venom-switch-2-fast-charge-60w-power-adaptor-nintendo-switch-2-5046704",
-      "price": 6.97,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/oM7DO/5046704_1/re/300x300/qt/55/5046704_1.jpg",
-      "posted_at": "2026-11-25T13:34:46+00:00",
-      "temperature": null,
-      "score": 34.84,
+      "id": "5038162",
+      "title": "Dundalgan Irish Country Cream Liqueur 70cl ABV 12% Lidl Plus Price",
+      "url": "https://www.hotukdeals.com/deals/dundalgan-irish-country-cream-liquer-70cl-abv-12-lidl-plus-5038162",
+      "price": 4.59,
+      "merchant": "Lidl",
+      "category": "Groceries",
+      "image": "https://images.hotukdeals.com/threads/raw/qWTXx/5038162_1/re/300x300/qt/55/5038162_1.jpg",
+      "posted_at": "2026-11-26T00:10:00+00:00",
+      "temperature": 172,
+      "score": 25.25,
       "reasons": [
-        "You follow gaming",
-        "In Gaming"
+        "Hot: 172°"
       ],
       "feeds": [
-        "tag/gaming"
+        "hot"
       ],
       "watchlist_item": ""
     },
     {
-      "id": "5046696",
-      "title": "Wave Race Blue Storm (Gamecube) Added to Nintendo Switch Online Expansion Pack - Switch / Switch 2",
-      "url": "https://www.hotukdeals.com/deals/wave-race-blue-storm-gamecube-added-to-nintendo-switch-online-expansion-pack-switch-switch-2-5046696",
-      "price": null,
-      "merchant": "Nintendo eShop",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/CGdWv/5046696_1/re/300x300/qt/55/5046696_1.jpg",
-      "posted_at": "2026-11-25T13:32:16+00:00",
-      "temperature": null,
-      "score": 34.78,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046693",
-      "title": "9 R.I.P. Standard Edition (Nintendo Switch Game)",
-      "url": "https://www.hotukdeals.com/deals/9-rip-standard-edition-nintendo-switch-5046693",
-      "price": 19.3,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/jzIFQ/5046693_1/re/300x300/qt/55/5046693_1.jpg",
-      "posted_at": "2026-11-25T13:29:33+00:00",
-      "temperature": null,
-      "score": 34.72,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046691",
-      "title": "Save An Extra £100 On Gaming PCs & Laptops Over £999",
-      "url": "https://www.hotukdeals.com/vouchers/save-an-extra-ps100-5046691",
-      "price": 100.0,
-      "merchant": "Currys",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/merchants/raw/avatar/6_4/re/352x352/qt/60/6_4.jpg",
-      "posted_at": "2026-11-25T13:25:49+00:00",
-      "temperature": null,
-      "score": 34.64,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046683",
-      "title": "Star Trek: Voyager - Across the Unknown - PC Steam",
-      "url": "https://www.hotukdeals.com/deals/star-trek-voyager-across-the-unknown-pc-steam-5046683",
-      "price": 12.99,
-      "merchant": "Loaded",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/6NP1O/5046683_1/re/300x300/qt/55/5046683_1.jpg",
-      "posted_at": "2026-11-25T13:21:24+00:00",
-      "temperature": null,
-      "score": 34.54,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046679",
-      "title": "Neptunia Riders VS Dogoos - Day One Edition (PS4)",
-      "url": "https://www.hotukdeals.com/deals/neptunia-riders-vs-dogoos-day-one-edition-ps4-5046679",
-      "price": 11.1,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/OXeCR/5046679_1/re/300x300/qt/55/5046679_1.jpg",
-      "posted_at": "2026-11-25T13:18:35+00:00",
-      "temperature": null,
-      "score": 34.48,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046672",
-      "title": "Edifier NeoBuds Planar Magnetic Bluetooth In-Ear Headphones with Hi-Res & Hybrid ANC ( 12mm / Wireless Charging ) @EdifierDirect UK/FBA",
-      "url": "https://www.hotukdeals.com/deals/edifier-neobuds-planar-bluetooth-in-ear-headphones-with-hi-res-hybrid-anc-12mm-drivers-wireless-charging-at-edifierdirect-ukfba-5046672",
-      "price": 89.99,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/Y82v7/5046672_1/re/300x300/qt/55/5046672_1.jpg",
-      "posted_at": "2026-11-25T13:12:43+00:00",
-      "temperature": null,
-      "score": 34.35,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046665",
-      "title": "SIM Free Apple iPhone 16 Plus 5G 128GB - 4 Colours (Free C&C)",
-      "url": "https://www.hotukdeals.com/deals/sim-free-apple-iphone-16-plus-5g-128gb-pink-at-argos-5046665",
-      "price": 699.0,
-      "merchant": "Argos",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/wQHRk/5046665_1/re/300x300/qt/55/5046665_1.jpg",
-      "posted_at": "2026-11-25T13:09:38+00:00",
-      "temperature": null,
-      "score": 34.28,
-      "reasons": [
-        "You follow apple",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046664",
-      "title": "Cupid Parasite: Sweet and Spicy Darling - Standard Edition (Nintendo Switch game)",
-      "url": "https://www.hotukdeals.com/deals/cupid-parasite-sweet-and-spicy-darling-standard-edition-nintendo-switch-5046664",
-      "price": 17.4,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/jD6Bo/5046664_1/re/300x300/qt/55/5046664_1.jpg",
-      "posted_at": "2026-11-25T13:07:31+00:00",
-      "temperature": null,
-      "score": 34.23,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046663",
-      "title": "Sennheiser ACCENTUM Plus Wireless Bluetooth Headphones, Noise Cancelling - White",
-      "url": "https://www.hotukdeals.com/deals/sennheiser-accentum-plus-wireless-bluetooth-headphones-noise-cancelling-white-5046663",
-      "price": 91.99,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/dCPdE/5046663_1/re/300x300/qt/55/5046663_1.jpg",
-      "posted_at": "2026-11-25T13:05:10+00:00",
-      "temperature": null,
-      "score": 34.18,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046659",
-      "title": "MSI FORCE GC30 V2 Wireless PC Gamepad Controller - 2.4 GHz, 600mAh, USB 2.0",
-      "url": "https://www.hotukdeals.com/deals/msi-force-gc30-v2-wireless-pc-gamepad-controller-24-ghz-600mah-usb-20-5046659",
+      "id": "5043227",
+      "title": "Silentnight Electric Blanket - Single, Double & King Size from £11.99 - Lidl Plus price (Northern Ireland)",
+      "url": "https://www.hotukdeals.com/deals/silentnight-electric-blanket-single-double-king-size-from-ps1199-lidl-plus-price-5043227",
       "price": 19.99,
+      "merchant": "Lidl Northern Ireland",
+      "category": "Home & Living",
+      "image": "https://images.hotukdeals.com/threads/raw/BRlIt/5043227_1/re/300x300/qt/55/5043227_1.jpg",
+      "posted_at": "2026-11-26T00:10:03+00:00",
+      "temperature": 162,
+      "score": 24.96,
+      "reasons": [
+        "Hot: 162°"
+      ],
+      "feeds": [
+        "hot"
+      ],
+      "watchlist_item": ""
+    },
+    {
+      "id": "5047427",
+      "title": "LEGO Creator 3in1 Haunted Mansion 31167, w/voucher",
+      "url": "https://www.hotukdeals.com/deals/lego-creator-3in1-haunted-mansion-31167-wvoucher-5047427",
+      "price": 49.49,
       "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/AYXeu/5046659_1/re/300x300/qt/55/5046659_1.jpg",
-      "posted_at": "2026-11-25T13:03:26+00:00",
+      "category": "Family & Kids",
+      "image": "https://images.hotukdeals.com/threads/raw/JW87h/5047427_1/re/300x300/qt/55/5047427_1.jpg",
+      "posted_at": "2026-11-26T01:41:13+00:00",
       "temperature": null,
-      "score": 34.14,
+      "score": 24.92,
       "reasons": [
-        "You follow gaming",
-        "In Gaming"
+        "You follow lego"
       ],
       "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046651",
-      "title": "Hyperdimension Neptunia Re;Birth3: V Generation - Standard Edition (PS4)",
-      "url": "https://www.hotukdeals.com/deals/hyperdimension-neptunia-rebirth3-v-generation-standard-edition-ps4-5046651",
-      "price": 18.28,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/jr1HD/5046651_1/re/300x300/qt/55/5046651_1.jpg",
-      "posted_at": "2026-11-25T12:56:34+00:00",
-      "temperature": null,
-      "score": 33.99,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046638",
-      "title": "Sword Art Online Fractured Daydream (Xbox Series X)",
-      "url": "https://www.hotukdeals.com/deals/sword-art-online-fractured-daydream-xbox-series-x-5046638",
-      "price": 12.6,
-      "merchant": "Amazon",
-      "category": "Gaming",
-      "image": "https://images.hotukdeals.com/threads/raw/cyKhY/5046638_1/re/300x300/qt/55/5046638_1.jpg",
-      "posted_at": "2026-11-25T12:45:37+00:00",
-      "temperature": null,
-      "score": 33.75,
-      "reasons": [
-        "You follow gaming",
-        "In Gaming"
-      ],
-      "feeds": [
-        "tag/gaming"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046515",
-      "title": "Apple Watch Series 12 GPS 42mm Smartwatch Light Gold Aluminium Case",
-      "url": "https://www.hotukdeals.com/deals/apple-watch-series-12-gps-42mm-smartwatch-light-gold-aluminium-case-5046515",
-      "price": 329.0,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/a5Ggl/5046515_1/re/300x300/qt/55/5046515_1.jpg",
-      "posted_at": "2026-11-25T11:12:55+00:00",
-      "temperature": null,
-      "score": 31.8,
-      "reasons": [
-        "You follow apple",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046476",
-      "title": "JBL Live 680NC Wireless Noise Cancelling Headphones",
-      "url": "https://www.hotukdeals.com/deals/jbl-live-680nc-wireless-noise-cancelling-headphones-5046476",
-      "price": 79.0,
-      "merchant": "Richer Sounds",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/XBgM7/5046476_1/re/300x300/qt/55/5046476_1.jpg",
-      "posted_at": "2026-11-25T10:44:21+00:00",
-      "temperature": null,
-      "score": 31.23,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046473",
-      "title": "Apple AirPods 5 Wireless Earbuds - With voucher at checkout",
-      "url": "https://www.hotukdeals.com/deals/apple-airpods-5-wireless-earbuds-5046473",
-      "price": 94.98,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/EJVsw/5046473_1/re/300x300/qt/55/5046473_1.jpg",
-      "posted_at": "2026-11-25T10:40:31+00:00",
-      "temperature": null,
-      "score": 31.15,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones",
-        "tag/apple",
-        "tag/apple-airpods"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046441",
-      "title": "Samsung Galaxy Tab A11+ Wifi Tablet 128GB 11-inch £111.15 With Trade Of Any iPad With Code + Free Book Cover Via GoCertify / EPP, 2 colours",
-      "url": "https://www.hotukdeals.com/deals/samsung-galaxy-tab-a11-wifi-tablet-128gb-11-inch-display-ps11115-with-trade-of-any-ipad-with-code-free-book-cover-via-gocertify-epp-5046441",
-      "price": 185.15,
-      "merchant": "Samsung",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/U7kQD/5046441_1/re/300x300/qt/55/5046441_1.jpg",
-      "posted_at": "2026-11-25T10:24:03+00:00",
-      "temperature": null,
-      "score": 30.82,
-      "reasons": [
-        "You follow apple",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046436",
-      "title": "Apple AirPods 5 with Wireless Charging Case - With voucher at checkout",
-      "url": "https://www.hotukdeals.com/deals/apple-airpods-5-with-wireless-charging-case-wireless-earbuds-5046436",
-      "price": 114.98,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/IvcLT/5046436_1/re/300x300/qt/55/5046436_1.jpg",
-      "posted_at": "2026-11-25T10:19:36+00:00",
-      "temperature": null,
-      "score": 30.73,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones",
-        "tag/apple",
-        "tag/apple-airpods"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046256",
-      "title": "Bose QuietComfort Ultra Bluetooth Earbuds (2nd Gen), Wireless Noise Cancelling earbuds, Up to 6 hours battery, IPX4 Rating",
-      "url": "https://www.hotukdeals.com/deals/bose-quietcomfort-ultra-bluetooth-earbuds-2nd-gen-wireless-noise-cancelling-earbuds-up-to-6-hours-battery-ipx4-rating-5046256",
-      "price": 189.0,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/kwOF3/5046256_1/re/300x300/qt/55/5046256_1.jpg",
-      "posted_at": "2026-11-25T08:18:57+00:00",
-      "temperature": null,
-      "score": 28.44,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046245",
-      "title": "Bose QuietComfort Ultra Headphones (2nd Gen) - Refurbished - 4 Colours - w/Code",
-      "url": "https://www.hotukdeals.com/deals/bose-quietcomfort-ultra-headphones-2nd-gen-refurbished-all-colours-direct-from-bose-5046245",
-      "price": 224.95,
-      "merchant": "Bose",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/I213V/5046245_1/re/300x300/qt/55/5046245_1.jpg",
-      "posted_at": "2026-11-25T08:12:44+00:00",
-      "temperature": null,
-      "score": 28.33,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046193",
-      "title": "Apple iPhone 16 Pro - 128 GB - White Titanium, Refurbished Good , Very Good £549.99 w/Student or Graduate Beans",
-      "url": "https://www.hotukdeals.com/deals/apple-iphone-16-pro-128-gb-desert-titanium-good-ps48999-very-good-ps54999-wcode-student-or-graduate-beans-5046193",
-      "price": 489.99,
-      "merchant": "musicMagpie",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/FPkvn/5046193_1/re/300x300/qt/55/5046193_1.jpg",
-      "posted_at": "2026-11-25T06:49:53+00:00",
-      "temperature": null,
-      "score": 26.86,
-      "reasons": [
-        "You follow apple",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/apple"
-      ],
-      "watchlist_item": ""
-    },
-    {
-      "id": "5046172",
-      "title": "HUAWEI FreeBuds SE 4 ANC, Wireless Earbuds, Black / White",
-      "url": "https://www.hotukdeals.com/deals/huawei-freebuds-se4-black-5046172",
-      "price": 29.99,
-      "merchant": "Amazon",
-      "category": "Electronics",
-      "image": "https://images.hotukdeals.com/threads/raw/QymsH/5046172_1/re/300x300/qt/55/5046172_1.jpg",
-      "posted_at": "2026-11-25T06:27:47+00:00",
-      "temperature": null,
-      "score": 26.49,
-      "reasons": [
-        "You follow headphones",
-        "In Electronics"
-      ],
-      "feeds": [
-        "tag/headphones"
+        "new",
+        "tag/lego"
       ],
       "watchlist_item": ""
     }
