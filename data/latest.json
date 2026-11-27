@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-26T17:18:34+00:00",
+  "checked_at": "2026-11-27T16:58:15+00:00",
   "items": {
     "airpods-pro-3": {
       "name": "Apple AirPods Pro 3",
       "target_price": 160.0,
-      "checked_at": "2026-11-26T17:18:34+00:00",
+      "checked_at": "2026-11-27T16:58:15+00:00",
       "best": {
         "item_id": "airpods-pro-3",
         "source": "PriceSpy",
@@ -33,7 +33,7 @@
         "posted_at": "",
         "trust": "trusted"
       },
-      "previous_checked_at": "2026-11-25T17:36:56+00:00",
+      "previous_checked_at": "2026-11-26T17:18:34+00:00",
       "offers": [
         {
           "item_id": "airpods-pro-3",
@@ -61,20 +61,6 @@
           "currency": "GBP",
           "kind": "price",
           "posted_at": "",
-          "trust": "unverified"
-        },
-        {
-          "item_id": "airpods-pro-3",
-          "source": "HotUKDeals",
-          "price": 159.0,
-          "url": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wvoucher-code-5045810",
-          "seller": "Joybuy",
-          "title": "Apple AirPods Pro 3 - w/voucher code",
-          "in_stock": null,
-          "condition": "new",
-          "currency": "GBP",
-          "kind": "deal",
-          "posted_at": "2026-11-24T19:26:59+00:00",
           "trust": "unverified"
         },
         {
@@ -160,7 +146,7 @@
     "airpods-4-anc": {
       "name": "Apple AirPods 4 with Active Noise Cancellation",
       "target_price": 100.0,
-      "checked_at": "2026-11-26T17:18:34+00:00",
+      "checked_at": "2026-11-27T16:58:15+00:00",
       "best": {
         "item_id": "airpods-4-anc",
         "source": "PriceSpy",
@@ -178,10 +164,10 @@
       "previous_best": {
         "item_id": "airpods-4-anc",
         "source": "PriceSpy",
-        "price": 107.49,
-        "url": "https://pricespy.co.uk/go-to-shop/42367/offer/A1T-NXRCKV9QEV?client_id=1551",
-        "seller": "A1 Tech Deals",
-        "title": "Apple AirPods 4 (ANC) Wireless Earbuds - White",
+        "price": 99.0,
+        "url": "https://pricespy.co.uk/go-to-shop/29044/offer/v1%7C800965523543%7C0?client_id=1551",
+        "seller": "eBay",
+        "title": "Apple AirPods 4 with Active Noise Cancellation ANC MXP93ZM/A - 100% GENUINE BNIB",
         "in_stock": true,
         "condition": "new",
         "currency": "GBP",
@@ -189,7 +175,7 @@
         "posted_at": "",
         "trust": "unverified"
       },
-      "previous_checked_at": "2026-11-25T17:36:56+00:00",
+      "previous_checked_at": "2026-11-26T17:18:34+00:00",
       "offers": [
         {
           "item_id": "airpods-4-anc",
